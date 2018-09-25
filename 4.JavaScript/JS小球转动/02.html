@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<div class="stage">
+			<div class="box"></div>
+		</div>
+
+		<style>
+			body {
+				margin: 0;
+				background: lightgreen;
+				height: 500px;
+			}
+			
+			.stage {
+				width: 400px;
+				height: 400px;
+				border: 10px solid black;
+				position: relative;
+			}
+			
+			.box {
+				width: 40px;
+				height: 40px;
+				background: red;
+				position: absolute;
+				top: 190px;
+				left: 190px;
+				border-radius: 50%;
+			}
+		</style>
+
+		<script type="text/javascript">
+			var box = document.querySelector('.box');
+			var boxStyle = box.currentStyle ? box.currentStyle : window.getComputedStyle(box, null);
+
+			var currentX = parseInt(boxStyle.left);
+			var currentY = parseInt(boxStyle.top);
+			var speed = 10;
+			var direction = 'right';
+
+			var moveRight = function() {
+				currentX += speed;
+				box.style.left = currentX + 'px';
+
+			}
+
+			var moveLeft = function() {
+				currentX -= speed;
+				box.style.left = currentX + 'px';
+
+			}
+
+			var moveUp = function() {
+				currentY -= speed;
+				box.style.top = currentY + 'px';
+
+			}
+			var moveDown = function() {
+				currentY += speed;
+				box.style.top = currentY + 'px';
+
+			}
+
+//			var checkCollision = function() {
+//				if(currentX >= 400 - 20) {
+//					direction = 'left';
+//				}
+//				if(currentX <= 0) {
+//					direction = 'right';
+//				}
+//				if(currentY >= 400 - 20) {
+//					direction = 'up';
+//				}
+//				if(currentY <= 0) {
+//					direction = 'down';
+//				}
+//			}
+
+			var checkCollision = function() {
+				if(currentX > 400 - 40) {
+					console.log('zhuangle')
+					currentX = 0;
+				}
+				if(currentX < 0) {
+					currentX = 400 - 40;
+				}
+				if(currentY > 400 - 40) {
+					currentY = 0;
+				}
+				if(currentY < 0) {
+					currentY = 400 - 40;
+				}
+			}
+
+			var id = setInterval(function() {
+				checkCollision();
+
+				if(direction === 'right') {
+					moveRight();
+				} else if(direction === 'left') {
+					moveLeft();
+				} else if(direction === 'up') {
+					moveUp();
+				} else if(direction === 'down') {
+					moveDown();
+				}
+			}, 30)
+
+			document.body.onkeydown = function(ev) {
+				console.log(ev.keyCode);
+				switch(ev.keyCode) {
+					case 37:
+						direction = 'left'
+						break;
+					case 38:
+						direction = 'up'
+						break;
+					case 39:
+						direction = 'right'
+						break;
+					case 40:
+						direction = 'down'
+						break;
+
+				}
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	
+	</head>
+	<body>		
+			<h1>开关切换</h1>
+			<label class="switch">
+		  <input type="checkbox" checked>
+		  <div class="box"></div>
+		</label>
+		
+		<label class="switch">
+		  <input type="checkbox" checked>
+		  <div class="box"></div>
+		</label>
+		<br />
+		<br />
+		<label class="switch">
+		  <input type="checkbox" checked>
+		  <div class="box round"></div>
+		</label>
+		<label class="switch">
+		  <input type="checkbox" checked>
+		  <div class="box round "></div>
+		</label>
+		
+		
+			<style type="text/css">
+				body{
+					text-align: center;
+				}
+				.switch{
+					
+					width: 60px;
+					height: 35px;
+					display: inline-block;
+					position: relative;
+					text-align: center;
+					margin: 20px;
+				}
+				.box{
+					position: absolute;
+					top:0px;
+					left:0px;
+					right: 0px;
+					bottom: 0px;
+					background: #ccc;
+					
+				}
+				.box:before{
+					content: '';
+					width: 25px;
+					height: 25px;
+					position: absolute;
+					top:5px;
+					left: 5px;
+					background: white;	
+					transition: .5s;
+					-webkit-transition: .5s;				
+				}
+					input:checked+.box {
+				background-color:green;
+			}
+			input:checked+.box:before {		
+				-ms-transform: translateX(28px);
+				transform: translateX(28px);
+				-webkit-transform: translateX(28px);
+			}
+			.box.round {
+				border-radius:40px;
+			}
+			.box.round:before{
+				border-radius:50% ;
+			}
+		   </style>
+		   
+		   
+		   <div class="box1">
+		   <label class="switch1">
+		  <input type="radio" name="profession">
+		  <div class="slider1">前端工程师</div>
+		</label>
+		<label class="switch1">
+		  <input type="radio" name="profession">
+		  <div class="slider1">视觉设计师</div>
+		</label>
+		
+		<hr />
+		<label class="switch1">
+		  <input type="checkbox">
+		  <div class="slider1">SVG</div>
+		</label>
+		<label class="switch1">
+		  <input type="checkbox">
+		  <div class="slider1">HTML5</div>
+		</label>
+		<label class="switch1">
+		  <input type="checkbox">
+		  <div class="slider1">JAVA</div>
+		</label>
+		</div>
+		<style type="text/css">
+			.box1{
+				margin-top: 50px;
+			}
+			.switch1{
+				margin: 20px;
+				/*width: 150px;*/
+				display: inline-block;
+			}
+			.switch1 input {
+				display: none;
+			}
+			.switch1 .slider1 {
+				background: #EAEAEA;
+				line-height: 36px;
+				border-radius: 3px;
+				font-size: 12px;
+				padding: 0 20px 0 10px;
+			}
+			.switch1 .slider1:before {
+				content: '';
+				width: 16px;
+				height: 16px;
+				display: inline-block;
+				background: url(img/input-unchecked.png);
+				vertical-align: middle;
+				margin-right: 5px;
+				margin-top: -2px;
+			}
+			.switch1 input:checked + .slider1 {
+				background: green;
+			}
+			.switch input:checked + .slider1:before {
+				background: url(img/input-checked.png);
+			}
+		</style>
+		
+	</body>
+</html>

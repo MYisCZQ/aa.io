@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="stage">
+    <div class="box"></div>
+</div>
+
+<style>
+    body {
+        margin: 0;
+        background: lightgreen;
+        height: 500px;
+    }
+
+    .stage {
+        width: 400px;
+        height: 400px;
+        border: 10px solid red;
+        position: relative;
+    }
+
+    .box {
+        width: 30px;
+        height: 30px;
+        background: blue;
+        position: absolute;
+        top: 150px;
+        left: 190px;
+        border-radius: 50%;
+    }
+</style>
+<script>
+    var box = document.querySelector('.box');
+    var box2=document.querySelector('box2');
+    var boxStyle = box.currentStyle ? box.currentStyle : window.getComputedStyle(box, null);
+    var boxSizeY = parseInt(boxStyle.height);
+    var positionX = parseInt(boxStyle.left);
+    var positionY = parseInt(boxStyle.top);
+    var range = 400;
+
+    var speed = 5;
+
+    var moveRight = function () {
+        positionX += speed;
+        box.style.left = positionX + 'px';
+    };
+    var moveBottom = function () {
+        positionY += speed;
+        box.style.top = positionY + 'px';
+    };
+    var moveLeft = function () {
+        positionX -= speed;
+        box.style.left = positionX + 'px';
+    };
+    var moveTop = function () {
+        positionY -= speed;
+        box.style.top = positionY + 'px';
+    };
+
+    var direction = 'right';
+
+    var checkCollision = function () {
+        if (positionX <= 0) {
+            direction = 'right';
+        } else if (positionX >= 400-20) {
+            direction = 'left';
+        } else if (positionY <= 0) {
+            direction = 'down';
+        } else if (positionY >= 400-20) {
+            direction = 'up';
+        }
+    };
+
+//  document.body.onkeydown = function (ev) {
+//      switch (ev.keyCode) {
+//          case 37:
+//              direction = 'left';
+//              break;
+//          case 38:
+//              direction = 'up';
+//              break;
+//          case 39:
+//              direction = 'right';
+//              break;
+//          case 40:
+//              direction = 'down';
+//              break;
+//          default:
+//              return;
+//      }
+//  };
+
+    var id = setInterval(function () {
+        checkCollision();
+
+        if (direction === 'right') {
+            moveRight();
+        } else if (direction === 'left') {
+            moveLeft();
+        } else if (direction === 'down') {
+            moveBottom();
+        } else if (direction === 'up') {
+            moveTop();
+        }
+    }, 50);
+
+</script>
+</body>
+</html>

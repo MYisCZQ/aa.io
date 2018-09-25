@@ -1,0 +1,1820 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+.datop{
+	background: #2c0903;
+	height: 40px;
+	position: relative; /*下拉图片定位*/
+	}
+.top{
+	width: 1500px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 auto;
+}
+.top .topleft .zwlogo a{
+	background: url(../img/炉石/iocF.png)no-repeat -19px -75px;
+     height: 40px;
+    width: 61.82px;
+    display: block;
+}
+.top .topleft .zwlogo a:hover{
+	background: url(../img/炉石/iocF.png) no-repeat -19px -119px;
+}
+.top li{
+	list-style: none;
+}
+.top a{
+	text-decoration: none;
+	color: rgba(255,255,255,.7);
+}
+.top .topleft li{
+	float: left;
+}
+.top .topleft li{
+	display: inline-block;
+	margin: 0 25px;
+}
+.top .topright{
+	float: right;
+	
+}
+.top .topright li{
+	display: inline-block;
+	margin: 0 25px;	
+}
+.top a:hover{
+	color: white;
+}
+
+.top li:nth-of-type(2)>a:after,
+.top li:nth-of-type(5)>a:after{
+	content: '';
+	width: 14px;
+	height: 7px;
+	background: url(../img/炉石/iocF.png) no-repeat;
+	background-position: -147px -131px;
+	display: inline-block;
+	margin-left: 5px;
+}
+.top li:nth-of-type(2):hover>a:after,
+.top li:nth-of-type(5):hover>a:after{
+	
+	background-position: -147px -145px;
+	}
+	
+/*一, 头部小部分     下面是显示图片下拉*/
+
+.top .topleft .wenzi .xmt{
+	z-index: 9;
+	width: 100%;
+	position: absolute;
+	top:40px;
+	left: 0px;	
+	text-align: center;
+	padding: 30px 0;
+	background: rgba(21,26,35,.95);
+	visibility: hidden;
+	border: 1px solid grey;
+	/*transition-duration: .3s;*/
+}
+.top .topleft .wenzi:hover .xmt{
+	visibility: visible;
+}
+/*.top .topleft .wenzi .xmt a:hover{
+	box-shadow: 0 0 1px 0 rgba(255,255,255,1);
+	filter: brightness(120%) blur(10px);
+}*/
+
+.top .topleft .wenzi .xmt a{
+	 width: 180px;
+	 height: 180px;
+	 display: inline-block;
+	 margin: 0 10px;
+}
+.top .topleft .xmt a:hover{
+	filter: brightness(130%);
+}
+.top .topleft .wenzi:hover .xmt a:nth-of-type(1){
+	  background: url(../img/炉石/00.jpg);
+	   background-position: center;
+	    background-size: cover; /* 这俩段大代码是调图片缩小的效果*/
+         transition-delay: 50ms;
+}
+.top .topleft .wenzi:hover .xmt a:nth-of-type(2){
+	  background: url(../img/炉石/002.jpg);
+	   background-position: center;
+	    background-size: cover; /* 这俩段大代码是调图片缩小的效果*/
+        transition-delay: 100ms;
+}
+.top .topleft .wenzi:hover .xmt a:nth-of-type(3){
+	  background: url(../img/炉石/003.jpg);
+	   background-position: center;
+	    background-size: cover; /* 这俩段大代码是调图片缩小的效果*/
+         transition-delay: 150ms;
+}
+.top .topleft .wenzi:hover .xmt a:nth-of-type(4){
+	  background: url(../img/炉石/004.jpg);
+	   background-position: center;
+	    background-size: cover; /* 这俩段大代码是调图片缩小的效果*/
+         transition-delay: 200ms;
+}
+.top .topleft .wenzi:hover .xmt a:nth-of-type(5){
+	  background: url(../img/炉石/005.jpg);
+	   background-position: center;
+	    background-size: cover; /* 这俩段大代码是调图片缩小的效果*/
+         transition-delay: 250ms;
+}
+.top .topleft .wenzi:hover .xmt a:nth-of-type(6){
+	  background: url(../img/炉石/006.jpg);
+	   background-position: center;
+	    background-size: cover; /* 这俩段大代码是调图片缩小的效果*/
+         transition-delay: 300ms;
+}
+
+
+/*2.下面是第二个下拉图片*/
+
+.subu{
+	z-index: 20;
+	width: 100%;
+	height: 350px;
+	/*display: inline-block;*/
+	background: rgba(21,26,35,.95);
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	text-align: center;
+	visibility: hidden;
+	border: 1px solid gray;
+	border-bottom:2px solid gray;
+	
+	
+}
+.topleft li:hover .subu{
+	visibility: visible;
+}
+ .subu a  {
+ 	margin: 0px -3px;
+	display: inline-block;
+	vertical-align: middle;
+	height: 300px;
+	margin-top: 10px;
+}
+.subu .left:hover {
+	background: #03345F;
+}
+.subu a .left{
+	height: 287px;
+	float: left;
+}
+
+/*//*/
+.subu .right img:hover{
+	background: #03345F;
+}
+.subu a:hover .right{
+	/*width: 100px;*/
+}
+.subu a .right{
+	width: 0px;
+	float: right;
+	
+
+}
+.subu a .right img{
+	width: 100px;
+	height: 95px;
+	display: block;	
+}
+.subu a:hover .right{
+	width: 100px;
+		transition: all .3s;
+	
+}
+ 
+ /*//*/
+/*.more{
+	color: white;
+	width: 100%;
+	height: 40px;
+	display: inline-block;
+	background: rgba(21,26,35,.95);
+	border-top: 1px solid gray;
+}
+.more span {
+				position: relative;
+				top: -20px;
+				opacity: 0;
+			}
+li:hover .subu .more span {
+				top: 0px;
+				opacity: 1;
+				transition: all 1s, opacity .5s .1s;
+			}*/
+.more{
+	color: white;
+	width: 100%;
+	height: 40px;
+	display: inline-block;
+	background: rgba(21,26,35,.95);
+	border-top: 1px solid gray;
+	/*vertical-align: middle;*/
+}
+.more1{
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	/*position: relative;
+	top:4px;*/
+	
+}
+.more2{
+	width: 64px;
+	height: 22px;
+	display: inline-block;
+}
+.more1{
+				position: relative;
+				top: -20px;
+				opacity: 0;
+			}
+.more2{
+				position: relative;
+				top: -20px;
+				opacity: 0;
+			}
+li:hover .subu .more1{
+	            top: 3px;
+				opacity: 1;
+				transition: all 1s;
+}
+li:hover .subu .more2{
+	            top: 0px;
+				opacity: 1;
+				transition: all 1s;
+}
+
+
+.wenzi:hover .subu>a:nth-of-type(1){
+	transition-delay: 50ms;	
+}
+.wenzi:hover  .subu>a:nth-of-type(2){
+	transition-delay: 100ms;	
+}
+ .wenzi:hover .subu>a:nth-of-type(3){
+	transition-delay: 150ms;	
+}
+.wenzi:hover .subu>a:nth-of-type(4){
+	transition-delay: 200ms;	
+}
+ .wenzi:hover .subu>a:nth-of-type(5){
+	transition-delay: 250ms;	
+}
+
+/*上面是第二张下拉图片*/
+
+
+  /*下面是第三张下拉框*/
+ 
+ .ndtxz{
+ 	z-index: 9px;
+ 	width: 318px;
+ 	height:166px;
+ 	background: rgba(21,26,35,.95);
+ 	position: absolute;
+ 	top: 40px;
+ 	right: 110px;
+ 	border: 0.5px solid gray;
+ 	text-align: center;
+ 	visibility: hidden;	
+ }
+ .topright li:hover .ndtxz{
+ 	visibility: visible;
+ } 
+ .ndtxz .denglu{
+ 	width: 318px;
+ 	height:78px;
+ 	border-bottom: 0.5px solid gray;
+ }
+ .ndtxz .denglu a:hover{
+ 	background: #0e86ca;
+ }
+ .ndtxz .denglu a{
+ 	text-align: center;
+ 	margin:20px 20px;
+ 	width: 277px;
+ 	height: 38px;
+ 	display: inline-block;
+ 	background: #0000FF;
+ }
+ 
+ .zhanghao {
+ 	width: 316px;
+ 	height: 44px;
+ 	display: inline-block;
+ 	border-bottom: 0.5px solid gray;
+ }
+ .zhanghao span{
+ 	width: 24px;
+ 	height: 24px;
+ 	display: inline-block;
+ 	background:url("../img/炉石/iocF.png") no-repeat;
+ 	background-position:-140px -12px; 
+ 	vertical-align: middle;
+ 	margin-left: -190px;
+ } 
+ .zhanghao a{
+ 	display: inline-block;
+    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    margin-left: 20px;
+ }
+ .zhanghao:hover{
+ 	background: #37353B;
+ 	/*border-bottom: 0.5px solid gray;*/
+ }
+ .zhuce:hover{
+ 	background: #37353B;
+ }
+ .zhuce {
+ 	width: 316px;
+ 	height: 40px;
+ 	display: inline-block;	
+ }
+ .zhuce span{
+ 	width: 24px;
+ 	height: 24px;
+ 	display: inline-block;
+ 	background:url("../img/炉石/iocF.png") no-repeat;
+ 	background-position:-200px -15px; 
+ 	vertical-align: middle;
+ 	margin-left: -190px;
+ } 
+ .zhuce a{
+ 	display: inline-block;
+    font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    margin-left: 20px;
+ }
+ 
+
+/*上面是第三张下拉框*/
+.zongbeijing{
+	background:burlywood ;
+	overflow: hidden;
+	/*position: relative;*/
+}
+.beijingtu{
+	width: 1600px;
+	margin: 0 auto;
+	background: url(../img/炉石/E.jpg);
+	background-attachment:fixed;
+	/*height: 2000px;*/
+	overflow: hidden;
+	background-size: cover;
+	padding-bottom: 200px;
+	
+	/*min-height: 2000px;*/
+}
+
+/* 如下是文本框*/
+
+.lus{
+	width: 1024px;
+	margin: 0 auto;
+	height: 275px;
+	position: relative;
+	z-index: 1;
+	
+	
+}
+.lus .logo{
+	z-index:0;
+	width: 350px;
+	height: 184px;
+	background: url(../img/炉石/LO.png) no-repeat;
+	position: absolute;
+				/*top:32px;*/
+				left:10px;
+}
+.lus .wenben{
+	          position: absolute;
+				top: 170px;
+				right: 20px;
+}
+ .lus .wenben input:nth-of-type(1){
+ 	width: 302px;
+ 	height: 42px;
+ 	background: rgba(58,58,58,.3);
+      border: 0.5px solid #8bb6ad;
+      color: #8bb6ad;
+      position: relative;
+      outline: none;
+
+ }
+.lus .wenben input:nth-of-type(2){
+	margin: 0;
+	width: 35px;
+	height: 25px;
+	background: url(../img/炉石/search.png);
+	position: absolute;
+	top:10px;
+	right: 18px;
+	border: none;
+	outline: none;
+}
+
+/*//如下是头部文字*/
+
+.navWrap{
+	z-index: 10;
+	position: relative;
+	width: 1024px;
+	height: 52px;
+	margin: 0 auto;
+	background: url("../img/炉石/F.jpg");	
+    /*position: sticky;
+    top: 0px;*/
+}
+.navWrap li{
+	width: 114px;
+	height: 52px;
+	display: block;
+	/*background: red;*/
+	float: left;
+	position: relative;
+	left:57px;
+}
+.navWrap li>a{
+	width: 114px;
+	height: 52px;
+	display: block;
+	background: rgba(0,0,0,.3);
+	background: url("../img/炉石/F.jpg") no-repeat;
+}
+/*.navWrap li:nth-of-type(1){
+	margin-left: 58px;
+}*/
+.navWrap li:nth-of-type(1)>a {
+	background-position: -58px 0px;
+	
+}
+.navWrap li:nth-of-type(2)>a {
+	background-position: -172px 0px;
+}
+.navWrap li:nth-of-type(3)>a {
+	background-position: -286px 0px;
+}
+.navWrap li:nth-of-type(4)>a {
+	background-position: -400px 0px;
+}
+.navWrap li:nth-of-type(5)>a {
+	background-position: -514px 0px;
+}
+.navWrap li:nth-of-type(6)>a {
+	background-position: -628px 0px;
+}
+.navWrap li:nth-of-type(7)>a {
+	background-position: -742px 0px;
+}
+.navWrap li:nth-of-type(8)>a {
+	background-position: -856px 0px;
+}
+.navWrap li:hover>a {
+	background-position-y: -104px;
+}
+.navWrap:before{
+	content: '';
+	width: 96px;
+	height: 74px;
+	background: url("../img/炉石/icoE.png");
+	position: absolute;
+	top: -18px;
+	left: -42px;
+}
+.navWrap:after{
+	content: '';
+	width: 95px;
+	height: 69px;
+	background: url("../img/炉石/icoAF.png");
+	position: absolute;
+	top:-18px;
+	right: -33px;
+}
+.navsub{
+	width: 114px;
+	  background: rgba(77,9,8,.95);
+	  display: none;
+	  position: absolute;
+	  top: 47px;
+	  left: 0px;
+	  z-index: 1;
+}
+.navWrap li:hover .navsub{
+	display: block;
+}
+.navsub a{
+	display: block;
+	line-height: 36px;
+	font-size: 14px;
+	text-decoration: none;
+	color: rgb(205, 153, 142);
+	padding-left: 20px;
+}
+.navsub a:hover{
+	color: white;
+	background: #81120c;
+}
+
+/*正文内容*/
+.max{
+	width: 1024px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+.maxleft{
+	z-index: 8;
+	position: relative;
+	top:0px;
+	left:0px;
+	/*height: 100vh;*/
+	float: left;
+	width: 703px;
+	/*height: 3000px;*/
+	/*overflow: hidden;*/
+	background: url("../img/炉石/44.png")  repeat-y;
+}
+
+   轮播图
+   .max1 li{
+	   list-style: none;
+   }
+   .max1{
+	   /* padding-top: -20px; */
+	   width: 640px;
+	   height: 296px;
+	   display: inline-block;
+	   left:-10px;
+	   top:-5px;
+	   /* overflow: hidden; */
+	   position: relative;
+   }
+   /* .max1 .eve{
+	   display: none;
+   } */
+ .eve img{
+	  display: block;
+   }
+   .eve{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 296px;
+    overflow: hidden;
+    /* z-index: 3; */
+   }
+   .max2{
+	width: 642px;
+	height: 45px;
+	display: inline-block;
+	background: rgba(0,0,0,.5);
+	z-index: 999;
+	position: absolute;
+	bottom: -18px;
+	left: 38px;
+	border: 1px solid #b7894c;
+
+   }
+.max2 li {
+	background-size: 66px 32px;
+	width: 66px;
+	height: 32px;
+	display:inline-block;
+	float: right;
+	margin: -11px 12px;
+	border: 1px solid gray;
+	/* position: absolute; */
+	/* bottom:10px;
+	left:30px;	  */
+	/* margin-left: 50px; */
+
+}
+.max2 p{
+	color: white;
+	font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+	margin-left: -5px;
+	
+	
+}
+
+/* .maxleft .max1{
+	width: 640px;
+	padding:20px 30px ;
+	
+	position: relative;
+}
+.maxleft .max1 img{
+	border: 1px solid #b7894c;
+	padding: 1px;
+}
+.max2{
+	width: 642px;
+	height: 45px;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	bottom: 20px;
+	left: 30px;
+	border: 1px solid #b7894c;
+	
+	
+}
+.max2 p{
+	color: white;
+	font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 10px;
+	
+}
+.max2 img{
+	width: 66px;
+	height: 32px;
+	float: right;
+	margin: 5px 10px;
+    border: 1px solid orange;
+	
+} */
+/*2.*/
+.one{
+	margin: 20px;
+	width: 660px;
+	height: 211px;
+	background: url("../img/炉石/news-eyes-bg.jpg") no-repeat;
+}
+.one1{
+	padding-top: 10px;
+	width: 310px;
+	height: 205px;
+	margin-left: 10px;
+/*	padding: 10px;*/
+	float: left;
+	background: url("../img/炉石/news.png") no-repeat;
+}
+.one1 img{
+	width: 280px;
+	height: 140px;
+	margin: 15px;
+	margin-left: 13px;
+}
+.one1 img:hover{
+	outline: 2px solid green;
+}
+.one2 img:hover{
+	outline: 2px solid green;
+}
+.one1 p{
+	color: #2e1b1e;
+    width: 288px;
+    height: 44px;
+    font-size: 16px;
+    margin: 0 auto;
+    line-height: 44px;
+    margin-top: -8px;
+    text-align: center;
+    font-weight: 700;
+}
+.one2{
+	padding-top: 10px;
+	width: 310px;
+	height: 205px;
+	margin-right: 10px;
+	float: right;
+	background: url("../img/炉石/news.png") no-repeat;
+}
+.one2 img{
+	width: 280px;
+	height: 140px;
+	margin: 15px;
+	margin-left: 13px;
+}
+.one2 p{
+	color: #2e1b1e;
+    width: 288px;
+    height: 44px;
+    font-size: 16px;
+    margin: 0 auto;
+    line-height: 44px;
+    margin-top: -8px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/*33*/
+.two{
+	width: 660px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top: 20px;
+	/*background: gray;*/
+}
+.two a{
+	text-decoration: none;
+}
+.A{
+	width: 630PX;
+	height: 140px;
+	/*background: #008000;*/
+	margin: 0 auto;
+	margin-top: 2px;
+	border-top: 1px solid #efdba8;
+	border-bottom: 1px solid #dbc497;
+}
+.A:hover{
+	background: url("../img/炉石/homenewsbg.png");
+    background-size: 100% auto;
+}
+.A1{
+	width:204px;
+	height: 104px;
+	float: left;
+	margin-top: 15px;
+}
+.A1 img:hover{
+	 outline: 1px solid green;
+}
+.A2{
+	width: 400px;
+	height: 104px;
+	float: right;
+}
+.A2 h3{
+	color: #150603;
+    font-size: 18px;
+    margin: 15px 0 10px 0;
+}
+.A2 P{
+	margin: -5px 0 10px 0;
+	color: #695745;
+    line-height: 20px;
+    height: 40px;
+    letter-spacing: 1px; 
+    overflow: hidden;
+}
+.A2 i:before{
+	content: '';
+	width: 19px;
+	height: 19px;
+	display: inline-block;
+	background: url(../img/炉石/AH.png) no-repeat -80px -108px;	
+}
+.A2 span i{
+	color: #666;
+}
+.A2 span i:hover:before{
+	background-position: -80px -129px;
+	
+}
+.A2 span time{
+	margin-left: 30px;
+	    color: #666;
+	    font-size: 12px;
+}
+.a{
+	width: 630px;
+	height: 44px;
+	text-align: center;
+    text-decoration: none;
+    background: rgb(211, 183, 139);
+	margin: 0 auto;
+	color: rgb(91, 75, 56);
+	border: 1px solid rgb(241, 219, 184);
+	
+}
+.a span i{
+	display: inline-block;
+	font-size: 20px;
+	padding-top: 10px;
+}
+.a span i:after{
+	content: '';
+	width: 20px;
+	height: 9px;
+	background: url("../img/炉石/more-icon.png") no-repeat;
+	display: inline-block;
+	position: relative;
+	top: 4px;
+	left: 15px;
+}
+.a:hover{
+	background: rgb(195, 164, 115);
+}
+.xinwen{
+	width: 703px;
+	height: 34px;
+	background: url("../img/炉石/homeconmain-bg-bot.png");
+   position: relative;
+   top:10px;
+}
+
+/*////////右边内容*/
+
+.mainright{
+	/*z-index: 1;*/
+	width: 340px;
+/*	height: 3000px;*/
+	overflow: hidden;
+	display: inline-block;
+	background: url(../img/炉石/homeconbar-bg.png) repeat-y 0px 0px;
+  background-position: right;
+  position: absolute;
+  top: 0px;
+  right:-2px;
+  z-index: 1;
+ 
+}
+.mainright .mainB{
+	background:url("../img/炉石/AF.jpg") no-repeat;
+	height: 590px;
+	text-align: center;
+	position: relative;
+	
+}
+.mainb{
+	width: 350px;
+	height: 192px;
+	background: url("../img/炉石/AC.png") no-repeat;
+}
+.mainb ul{
+	width: 240px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: absolute;
+	top:230px;
+	left: 16px;
+	
+}
+.mainb ul li {
+	
+	width: 80px;
+	height: 90px;
+	display:inline-block;
+	background: url("../img/炉石/AD.png")no-repeat;
+}
+.mainb ul li{
+	float: left;
+	list-style: none;	
+}
+.mainb ul li:nth-of-type(1) {
+	background-position: 0px -180px;
+}
+.mainb ul li:nth-of-type(2) {
+	background-position: -80px 0px;
+}
+.mainb ul li:nth-of-type(3) {
+	background-position: -160px 0px;
+}
+.mainb ul li:hover {
+	background-position-y:-90px;
+}
+
+  /* 视频*/
+ .shipin{
+ 	  width: 220px;
+ 	  height: 60px;
+ 	  display: inline-block;
+ 	 /* background: url("../img/炉石/AE.png") no-repeat;*/
+ 	 /* background-position: -37px bottom;*/
+ 	  position: relative;
+ 	  top:150px;
+ }
+ 
+ .mainright .B{
+ 	width: 305px;
+ 	height: 244px;
+ 	
+ 	margin: 0 auto;
+ 	background:  url("../img/炉石/moudel-top-bg.jpg") no-repeat;
+ }
+ .mainright .B h3:before{
+ 	content: '';
+ 	width:30px ;
+ 	height:30px ;
+ 	display: inline-block;
+ 	background: url("../img/炉石/AH.png") no-repeat;
+ 	background-position: -87px -4px;
+ 	vertical-align: middle; 
+ 	margin-right: 10px;
+ 	
+ }
+ .mainright .B h3{
+ 	margin: 0;
+ 	font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    height: 30px;
+    color: #03345f;
+    padding-top: 20px;
+    
+ }
+.mainright .b{
+	position: relative;
+	width: 305px;
+	height: 154px;
+	margin: 0 auto;
+	text-align: center;
+}
+.mainright .b img{
+	width: 244px;
+	height: 124px;
+	position:absolute ;
+	top: -15px;
+	left:30px;
+	border-radius: 3px;	
+	padding-bottom: 20px;
+}
+.mainright .b a{
+	text-decoration: none;
+	font-size: 20px;
+	color: black
+}
+.mainright .b h5{
+	line-height: 30px;
+	height: 30px;
+	padding-top: 115px;
+}
+.mainright .b .bb .bba
+{
+	width: 7px;
+	height: 14px;
+	display: inline-block;
+	background: url("../img/炉石/zhibiao.gif") no-repeat;
+	position: absolute;
+	top:40px;
+	left:15px;	
+}
+.mainright .b .bb .bba:hover{
+	background: url("../img/炉石/zhibiao.gif") no-repeat -16px 0px;
+}
+.mainright .b a img{
+	transition: all .3s;
+}
+.mainright .b a:hover img:last-of-type{
+	transform: scale(1.1);
+	filter: brightness(70%);
+	-webkit-transform: scale(1.1);
+	-webkit-filter: brightness(70%);
+}
+.mainright .b .bb .bbb{
+	width: 7px;
+	height: 14px;
+	display: inline-block;
+	background: url("../img/炉石/zhibiao.gif") no-repeat -7px 0px;
+	position: absolute;
+	top:40px;
+	right:18px;	
+}
+.mainright .b .bb .bbb:hover{
+	background: url("../img/炉石/zhibiao.gif") no-repeat -23px 0px;	
+}
+   /*呵呵*/
+  .C{
+  	width: 305px;
+	height: 244px;
+  	background: red;
+  	padding-top: 1px;
+  	margin: 0 auto;
+  	background:  url("../img/炉石/moudel-top-bg.jpg") no-repeat;
+  }
+.mainright .C h3:before{
+ 	content: '';
+ 	width:30px ;
+ 	height:30px ;
+ 	display: inline-block;
+ 	background: url("../img/炉石/AH.png") no-repeat;
+ 	background-position: -87px -4px;
+ 	vertical-align: middle; 
+ 	margin-right: 10px;	
+ }
+ .mainright .C h3{
+ 	 padding-top: 10px;
+ 	 font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    height: 30px;
+    color: #03345f;
+ }
+ .C .cc{
+ 	border-radius: 3px;
+ 	margin: 0 auto;
+ 	width: 265px;
+ 	height: 174px;
+ 	background: url("../img/炉石/live.jpg") no-repeat ;
+ }
+ 
+ /*呵呵*/
+
+.mainright .D {
+	padding-top: 1px;
+	width: 305px;
+	height: 325px;
+	margin: 0 auto;
+		background:  url("../img/炉石/moudel-top-bg.jpg") no-repeat;
+}
+.mainright .D h3:before{
+	content: '';
+	width:30px ;
+ 	height:30px ;
+ 	display: inline-block;
+ 	background: url("../img/炉石/AH.png") no-repeat;
+ 	background-position: -46px -74px;
+ 	vertical-align: middle
+	
+} 
+.mainright .D h3{
+	padding-top: 20px;
+	font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    height: 30px;
+    color: #03345f;
+}
+.mainright .D ul{
+	margin-left: -20px;
+}
+.mainright .D li{
+	list-style: none;
+	width: 265px;
+	height: 38px;
+	margin-top: 0px;
+	border-bottom: 1px solid #e8d6a8;
+	/*margin-left: 10px;*/
+	
+}
+.mainright .D li:before{
+	content: '';
+	/*vertical-align: middle;*/
+	width: 10px;
+	height: 7px;
+	display: inline-block;
+	background: url("../img/炉石/AH.png") no-repeat ;
+	background-position: -135px -143px
+}
+.mainright .D li a{
+	color: #5b4b38;
+    font-size: 14px;
+    display: block;
+    margin-top: -18px;
+    margin-left: 10px;
+    /*line-height: 28px;*/
+	text-decoration: none;
+	
+}
+.mainright .D li :hover{
+	color: #db6800;
+}
+.mainright .D .d{
+	width: 265px;
+	height: 35px;
+	margin: 0 auto;
+}
+.mainright .D .d a{
+	width: 33px;
+	height: 30px;
+	display: inline-block;
+	background:  url("../img/炉石/icon-more.png") no-repeat;
+	margin-top:15px;
+	margin-left: 225px;
+}
+ 
+  /* <!-- 赛事第三方-->  */
+
+.mainright .E{
+	width: 305px;
+	height: 430px;
+	/*overflow: hidden;*/
+	text-align-last: center;
+	/*background: red;*/
+	margin: 0 auto;
+	padding-top: 15px;
+	}
+
+.mainright .E1{
+	
+	width: 262px;
+	height: 64px;
+	margin-left: 21px;
+	/*margin: 0 auto ;*/
+	display: inline-block;
+	position: relative;
+	background: burlywood;
+	border: 1px solid #efd4ad;
+	
+	}
+.mainright .e1 h4{
+	
+	padding-right: 150px;
+	color: #251c0f;
+    font-size: 15px;
+    font-weight: 700;
+	width: 65px;
+	height: 20px;	
+	display: inline-block;
+}
+.mainright .E1 a{
+	width: 100%;
+	height: 66px;
+	display: inline-block;
+	background:url("../img/炉石/AI.png") no-repeat;
+	background-position: 175px -279px;
+	position: absolute;
+	top: -8px;
+	right: 0px;
+}
+.mainright .E1 a:hover{
+	background:url("../img/炉石/AI.png") no-repeat;
+	background-position: 175px -380px;	
+}
+
+
+.mainright .E2{
+	margin-left: 21px;
+	margin-top: 100px;
+	margin-top: 15px;
+	width: 262px;
+	height: 64px;
+	/*margin: 0 auto ;*/
+	display: inline-block;
+	position: relative;
+	background: burlywood;
+	border: 1px solid #efd4ad;
+	
+	}
+.mainright .e2 h4{
+	padding-right: 130px;
+	color: #251c0f;
+    font-size: 15px;
+    font-weight: 700;
+	width: 200px;
+	height: 20px;	
+	display: inline-block;
+}
+.mainright .E2 a{
+	width: 100%;
+	height: 80px;
+	display: inline-block;
+	background:url("../img/炉石/AI.png") no-repeat;
+	background-position: 175px -775px;
+	position: absolute;
+	top: -20px;
+	right: 0px;
+}
+.mainright .E2 a:hover{
+	background:url("../img/炉石/AI.png") no-repeat;
+	background-position: 175px -895px;	
+}
+
+.mainright .E3{
+	margin-left: 21px;
+	margin-top: 100px;
+	margin-top: 15px;
+	width: 262px;
+	height: 64px;
+	/*margin: 0 auto ;*/
+	display: inline-block;
+	position: relative;
+	background: burlywood;
+	border: 1px solid #efd4ad;
+	
+	}
+.mainright .e3 h4{
+	padding-right: 130px;
+	color: #251c0f;
+    font-size: 15px;
+    font-weight: 700;
+	width: 150px;
+	height: 20px;	
+	display: inline-block;
+}
+.mainright .E3 a{
+	width: 100%;
+	height: 80px;
+	display: inline-block;
+	background:url("../img/炉石/AI.png") no-repeat;
+	background-position: 175px -1647px;
+	position: absolute;
+	top: -10px;
+	right: 0px;
+}
+.mainright .E3 a:hover{
+	background:url("../img/炉石/AI.png") no-repeat;
+	background-position: 175px -1739px;	
+}
+
+.mainright .E4{
+	margin-left: 21px;
+	margin-top: 100px;
+	margin-top: 15px;
+	width: 262px;
+	height: 64px;
+	/*margin: 0 auto ;*/
+	display: inline-block;
+	position: relative;
+	background: burlywood;
+	border: 1px solid #efd4ad;
+	position: relative;
+	}
+.mainright .e4 h4{
+	padding-right: 130px;
+	color: #251c0f;
+    font-size: 15px;
+    font-weight: 700;
+	width: 150px;
+	height: 20px;	
+	display: inline-block;
+}
+.mainright .E4 a{
+	width: 100%;
+	height: 70px;
+	display: inline-block;
+	background:url("../img/炉石/AI.png") no-repeat;
+	background-position: 175px -2045px;
+	position: absolute;
+	top: -8px;
+	right: 0px;
+}
+.mainright .E4 a:hover{
+	background:url("../img/炉石/AI.png") no-repeat;
+	background-position: 175px -2055px;	
+}
+
+.mainright .E4 .baoxue{
+	visibility: hidden;
+	position: absolute;
+	top:-170px;
+	padding: 10px;
+    background: rgba(0,0,0,.5);
+    border-radius: 5px;
+} 
+.mainright .E4:hover .baoxue{
+	visibility: visible;
+	position: absolute;
+	top:-170px;
+	padding: 10px;
+    background: rgba(0,0,0,.5);
+    border-radius: 5px;
+}
+
+
+
+
+.mainright .E5{
+	margin-top: 100px;
+	margin-top: 15px;
+	width: 262px;
+	height: 64px;
+	/*margin: 0 auto ;*/
+	display: inline-block;
+	position: relative;
+	background: burlywood;
+	border: 1px solid #efd4ad;
+	
+	}
+.mainright .e5 h4{
+	padding-right: 130px;
+	color: #251c0f;
+    font-size: 15px;
+    font-weight: 700;
+	width: 150px;
+	height: 20px;	
+	display: inline-block;
+}
+.mainright .E5 a{
+	width: 100%;
+	height: 66px;
+	display: inline-block;
+	background:url("../img/炉石/AI.png") no-repeat;
+	background-position: 175px -615px;
+	position: absolute;
+	top: -8px;
+	right: 0px;
+}
+.mainright .E5 a:hover{
+	background:url("../img/炉石/AI.png") no-repeat;
+	background-position: 175px -625px;	
+}
+
+/*..呵呵*/
+
+.mainright .G{
+	/*text-align: center;*/
+	margin: 0 auto;
+	width: 305px;
+	height: 333px;
+	/*overflow: hidden;*/
+	position: relative;
+	/*display: inline-block;*/
+	/*background: red;*/
+	background: url("../img/炉石/moudel-top-bg.jpg") no-repeat;
+}
+.mainright .G:before{
+	content: '';
+ 	width:30px ;
+ 	height:30px ;
+ 	display: inline-block;
+ 	background: url("../img/炉石/AH.png") no-repeat;
+ 	background-position: -4px -189px;
+ 	vertical-align: middle; 
+ 	margin-left: 10px;
+	
+}
+
+
+.mainright .G h3{
+	margin: 0;
+ 	font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    height: 30px;
+    color: #03345f;
+    display: inline-block;
+    padding-top: 20px;   
+ }
+ 
+ .mainright .G ul li{
+ 	list-style: none;
+ }
+.mainright .G ul li a{
+ 	text-decoration: none;
+ 	color: #000000;
+ 	font-size: 18px;
+ }
+.mainright .G ul .g1 span{
+	width: 42px;
+	height: 42px;
+	display: inline-block;
+	vertical-align: middle; 
+	background: url("../img/炉石/weixin.png") no-repeat -204px 0px ;
+	/*background-position: 0px 200px;*/
+}
+.mainright .G ul .g1 {
+	margin-left:120px;
+}
+.mainright .G ul .g1:hover span{
+	background: url("../img/炉石/weixin.png") no-repeat -204px -58px ;
+    transition:.3s;
+}
+.mainright .G ul .g1 a:hover {
+	color: #db6800; 
+} 
+
+.mainright .G ul .g2{
+	margin-top:-25px ;
+	margin-left: -25px;
+	position: relative;
+		width: 110px;
+}
+.mainright .G ul .g2 span{
+	width: 42px;
+	height: 42px;
+	display:block;
+	vertical-align: middle;
+	background: url("../img/炉石/weixin.png") no-repeat -372px 0px ;
+}
+.mainright .G ul .g2 .dyh:hover{
+	color:green;
+}
+.mainright .G ul .g2 .wxh:hover{
+	color:#db6800 ;
+}
+.mainright .G ul .g2 .dyh i{
+	color:green;
+}
+.mainright .G ul .g2 .wxh i{
+	color:#db6800 ;
+}
+
+.mainright .G ul .g2 .wxdy{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+    background: rgba(0,0,0,.5);
+    border-radius: 5px;	
+	position: absolute;
+	top:-124px;
+	left:-8px;
+	visibility: hidden;
+}
+.mainright .G ul .g2:hover .wxdy{
+	visibility: visible;
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+    background: rgba(0,0,0,.5);
+    border-radius: 5px;
+	display: inline-block;	
+	position: absolute;
+	top:-124px;
+	left:-8px;
+}
+
+
+
+
+
+.mainright .G ul .g3{
+	margin-top: -40px;
+	margin-left: 120px;
+	
+}
+
+.mainright .G ul .g3 span{
+	width: 42px;
+	height: 42px;
+	display:inline-block;
+	vertical-align: middle; 
+	background: url("../img/炉石/weixin.png") no-repeat -457px 0px ;
+}
+.mainright .G ul .g3:hover span{
+	background: url("../img/炉石/weixin.png") no-repeat -457px -58px ;
+    transition: .3s;
+}
+.mainright .G ul .g3 a:hover{
+	color: #db6800;
+}
+
+.mainright .G ul .g4
+{
+	margin-top: 20px;
+	margin-left: -30px;
+	width: 150px;
+	height: 80px;
+	line-height: 30px;
+	display: inline-block;
+	/*background: #0000FF;*/
+}
+.mainright .G ul .g4 a{
+	font-size: 10px;
+}
+.mainright .G ul .g4 a:hover{
+	color: #db6800; 
+}
+
+.mainright .G ul .g5{
+	margin-left: 15px;
+	width: 120px;
+	height: 80px;
+	height: 50px;
+	display: inline-block;
+
+}
+.mainright .G ul .g5 a{
+	font-size: 10px;
+	margin-top:10px ;
+}
+.mainright .G ul .g5 a:hover{
+	color: #db6800;
+}
+
+/*.mainright .youxia{
+	width: 340px;
+	height: 35px;
+	overflow: hidden;
+	display: inline-block;
+	background:red url("../img/炉石/bg-bot.png") no-repeat;
+    position: absolute;
+    bottom: 5px;
+    left: -10px;
+}*/
+
+.footbu{
+	/*z-index: 100;*/
+	margin: 0 auto;
+	height: 410px;
+	/*overflow: hidden;*/
+	/*width:100%;
+	position: absolute;
+	bottom: -150px;
+	left: 0px;*/
+	background: url("../img/炉石/footer.jpg") no-repeat ;
+	background-size: 100%;
+	/*margin-top: 200px;*/
+	/*text-align: center;*/
+	/*margin-top: 100px;*/
+	margin-top: -10px;
+}
+
+.footbu .zczh{
+	z-index: 999;
+	width: 349px;
+	height: 87px;
+    margin-bottom: 10px;
+	/*left: 50%;*/
+	display: block;
+	margin: 0 auto;
+     position: relative;
+     top:-30px;
+	background:  url("../img/炉石/Freg-bg.png") no-repeat;
+}
+.footbu .zczh .zczh1{
+	width: 250px;
+	height: 80px;
+	display: block;
+	margin: 0 auto;
+	background:url("../img/炉石/Freg-btn.png") no-repeat 0px 5px;
+   margin-top: 12px;
+}
+.footbu .zczh .zczh1:hover{
+	background: url("../img/炉石/Freg-btn.png") no-repeat 0px -80px;
+}
+
+
+.footbu .zaixian{
+	width: 1200px;
+	height: 100px;
+	display:block;
+	margin: -8px auto;
+}
+.footbu .zaixian .zx1{
+	float: left;
+	width: 450px;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+/*	background: #0000FF;*/
+	margin-top:30px;
+}
+.zx1 a{
+	color: white;
+	/*padding: 0;*/
+	margin-right: 50px;
+	text-decoration: none;
+}
+
+.zx1 .aa1 span{
+	content: '';
+	width: 19px;
+	height: 19px;
+	display: inline-block;
+	background:url("../img/炉石/business.png") no-repeat;
+  background-position: -6px -7px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.zx1 .aa2 span{
+	content: '';
+	width: 19px;
+	height: 19px;
+	display: inline-block;
+	background:url("../img/炉石/business.png") no-repeat;
+  background-position: -36px -8px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+.zx1 .aa3 span{
+	content: '';
+	width: 19px;
+	height: 19px;
+	display: inline-block;
+	background:url("../img/炉石/business.png") no-repeat;
+  background-position: -8px -32px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.footbu .zaixian .zx2{
+	float: right;
+	width: 450px;
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+/*	background: #0000FF;*/
+	margin-top:30px;
+}
+.zx2 a{
+	color: white;
+	text-decoration: none;
+	margin-right: 50px;	
+}
+.zx2 .bb1 span{
+	content: '';
+	width: 95px;
+	height: 31px;
+	display:inline-block;
+	background: url("../img/炉石/-logo.png") no-repeat;
+	background-position:-350px 3px;
+	vertical-align:middle;
+	margin-left: 10px;
+}
+/*.zx2 p{
+	display: inline-block;
+}*/
+          /*三角形*/
+         .zx2{
+         	position: relative;
+         }
+       .boobox{
+	    		position: absolute;
+                top: 0px;
+                right: 100px;
+                clip: rect(22px,22px,30px,0px);
+	    	}
+	    	.boo{
+	    		width: 10px;
+	    		height: 10px;
+	    		background: #ac771f;
+	    		display: inline-block;
+	    		border: 5px solid #ac771f;
+	    		border-right: none;
+	    		border-bottom: none;
+	    		transform: rotate(45deg);
+	    		-webkit-transform: rotate(45deg);
+	    	}
+            /*三角形*/
+
+
+.cprt{
+	width: 1200px;
+	height: 250px;
+	display: block;
+	margin: 0 auto;
+}
+ .ct1{
+ 	float: left;
+ }
+.cprt .ct1 .cc1{
+	width: 140px;
+	height: 80px;
+	display: inline-block;
+   background: url("../img/炉石/Flogo_blizzard.png") no-repeat;
+   margin-top: 20px;
+}
+.cprt .ct1 .cc2{
+	width: 125px;
+	height: 43px;
+	display: inline-block;
+	background:url("../img/炉石/2Flogo_ne.png") no-repeat;	
+}
+
+.cprt .ct2{
+	margin-top: 40px;
+	float: right;
+	width: 720px;
+	height: 200px;	
+	display: inline-block;
+	/*background: #008000;*/
+	color: #552c09;
+}
+.cprt .ct2 ul{
+	margin-left: -50px;
+}
+.cprt .ct2 ul li{
+	list-style: none;
+	float: left;
+	margin-left: 20px;
+	margin-top: -10px;
+}
+.cprt .ct2 ul li a{
+	color: white;
+	text-decoration: none;
+}
+
+.cprt .ct2 .pp1{
+	margin-left: 10px;
+	width: 720px;
+	height: 40px;
+	font-size: 12px;
+    margin: 0;
+    line-height: 20px;
+	/*background: white;*/
+    margin-top: 40px;
+}
+.cprt .ct2 .pp2{
+	width: 720px;
+	height: 60px;
+	font-size: 12px;
+    margin: 0;
+    line-height: 20px;
+	/*background: white;*/
+    margin-top: 2px;
+}
+.cprt .ct2 .pp3{
+	width: 720px;
+	height: 50px;
+	font-size: 12px;
+    margin: 0;
+    line-height: 40px;
+	/*background: white;*/
+    margin-top: -20px;
+}
+.cprt .ct2 .pp3 .sp1{
+/*	margin-left: -200px;*/
+	content: '';
+	width: 27px;
+	height: 26px;
+	display: inline-block;
+	background: url("../img/炉石/police1.png") no-repeat;
+  vertical-align: middle;
+}
+.cprt .ct2 .pp3 .sp2{
+	content: '';
+	width: 24px;
+	height: 26px;
+	display: inline-block;
+	background: url("../img/炉石/police2.png") no-repeat;
+     vertical-align: middle;
+}
+.cprt .ct2 .pp3 .sp3{
+	content: '';
+	width: 23px;
+	height: 26px;
+	display: inline-block;
+	background: url("../img/炉石/police3.png") no-repeat;
+     vertical-align: middle;
+ }
+.cprt .ct2 .pp3 .sp4{
+	content: '';
+	width: 27px;
+	height: 28px;
+	display: inline-block;
+	background: url("../img/炉石/police4.png") no-repeat;
+     vertical-align: middle;
+}
+
+.cprt .ct2 p{
+	color: #552c09;
+}
+.cprt .ct2 a{
+	text-decoration: none;
+	color: #552c09;
+}
+.cprt .ct2 a:hover{
+	color: white;
+}
+
+
+
+.MM{
+	position: fixed;
+	bottom:100px;
+	right: 100px;
+}
+.m1{
+	width: 82px;
+	height: 82px;
+	border-radius: 50%;
+	background:gray;
+	position: relative;
+}
+.m1 img:last-of-type{
+	position: absolute;
+	top:0px;	
+}
+.m1 img{
+	transition: all .5s;
+}
+.m1 img:first-of-type{
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
+.m1:hover img:first-of-type{
+	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+}
+.m1:hover img:last-of-type{
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	z-index: -1;
+	/*display: none;*/
+} 
+
+.m2{
+	margin-top: 20px;
+	width: 82px;
+	height: 82px;
+	border-radius: 50%;
+	background:gray;
+}
+.m3{
+	width: 82px;
+	height: 82px;
+	border-radius: 50%;
+	background:gray;
+}

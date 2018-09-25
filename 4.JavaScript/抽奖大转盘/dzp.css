@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.wenzi {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 40px;
+}
+.beijin {
+  margin: 0 auto;
+  width: 650px;
+  height: 600px;
+  background: url("img/turntable-bg.jpg");
+  border: 1px solid red;
+  position: relative;
+}
+.beijin #pointer {
+  width: 174px;
+  height: 228px;
+  position: absolute;
+  top: 150px;
+  left: 255px;
+  z-index: 3;
+}
+.beijin #turntable {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 60px;
+  left: 120px;
+}

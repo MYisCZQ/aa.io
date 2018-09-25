@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="dzp.css" />
+	<body>
+		<div class="beijin">
+			<div id="pointer">
+				<img src="img/pointer.png" />
+			</div>
+			<div id="turntable">
+				<img id="imgs" src="img/turntable.png" />
+			</div>			
+		</div>
+		<div class="wenzi">适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</div>
+		<script>
+			var pointer=document.getElementById("pointer");
+			var turntable=document.getElementById("turntable");
+			 
+			 var canClick=true;
+			pointer.onclick=function(){	
+				if(canClick===true){
+					canClick=false;
+				var randomNumber=Math.floor(Math.random() *100);
+				//生成随机数
+				
+				 var grade;
+				 if(randomNumber < 1) {
+						grade = {
+							code: 1,
+							text: "一等奖"
+						};
+					} else if(randomNumber < 5) {
+						grade = {
+							code: 2,
+							text: "二等奖"
+						};
+					} else if(randomNumber < 13) {
+						grade = {
+							code: 3,
+							text: "三等奖"
+						};
+					} else if(randomNumber < 21) {
+						grade = {
+							code: 4,
+							text: "四等奖"
+						};
+					} else if(randomNumber < 35) {
+						grade = {
+							code: 5,
+							text: "五等奖"
+						};
+					} else if(randomNumber < 50) {
+						grade = {
+							code: 6,
+							text: "六等奖"
+						};
+					} else {
+						grade = {
+							code: 7,
+							text: "感谢参与继续努力"
+						};
+				 }
+				     console.log(grade);
+				
+				
+				  var currentAngle = 30 + (360 / 7) * (grade.code - 1);
+			      turntable.style.transition = 'all 3s';
+					turntable.style.transform = 'rotate(' + (currentAngle + 360 * 3) + 'deg)';
+			
+			              
+					setTimeout(function() {
+						turntable.style.transition = 'all 0s';
+						turntable.style.transform = 'rotate(' + currentAngle + 'deg)';
+						alert(grade.text);
+						canClick = true;
+					}, 3000);
+			      
+			}
+				}
+		</script>
+	</body>
+</html>

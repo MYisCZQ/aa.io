@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="getdata()">获取数据</button>
+  <div id="box"></div>
+  <img src="" alt="">
+
+  <script>
+    var xmlhttp = new XMLHttpRequest();
+    var APIurl = 'https://www.apiopen.top/meituApi?page=';
+    var page = 1;
+    var json;
+
+    function getdata() {
+      var currentUrl = APIurl + page;
+      xmlhttp.open('get', currentUrl);
+      xmlhttp.send();
+      page++;
+    }
+
+    xmlhttp.onreadystatechange = function () {
+      // console.log(xmlhttp.response)
+      // console.log(xmlhttp.responseText.data)
+      if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+        json = JSON.parse(xmlhttp.responseText);
+        // console.log(json.data[0].url)
+        // var x = '';
+
+        for (var i = 0; i < json.data.length; i++) {
+          // console.log(json.data[i].url)
+          var imgNOde = new Image();
+          var imgNode = document.createElement('img');
+          imgNode.src = json.data[i].url;
+          // console.log(imgNode)
+          document.body.appendChild(imgNode);
+
+          // x += '<img src="' + json.data[i].url + '">'
+          // document.getElementById('box').innerHTML = x;
+
+        }
+      }
+
+    }
+  </script>
+
+  <style>
+    img {
+      width: 200px;
+    }
+
+    button {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: red;
+    }
+  </style>
+
+</body>
+
+</html>

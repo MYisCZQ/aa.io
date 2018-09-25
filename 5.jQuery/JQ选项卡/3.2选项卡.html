@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+ <script src="js/jquery.js"" type="text/javascript" charset="utf-8"></script>
+ <link rel="stylesheet" href="3.2选项卡.css">  
+ <div class="content">
+
+     <div class="top">
+         <li class="active">我是老大</li>
+         <li class="xxx">我是老二</li>
+         <li class="xxx">我是老三</li>
+         <li class="xxx">我是老四</li>
+     </div>
+
+     <div class="box">
+        <li class="BOX"">早上好啊我是老大</li>
+        <li>中午好啊我是老二</li>
+        <li>下午好啊我是老三</li>
+         <li>晚上好啊我是老四</li>
+     </div>
+
+    </div>
+
+    <script>
+     $(function(){
+       $(".top li").each(function(index){
+           if($(this).hasClass("active")){
+              $(".box>li").eq(index).show().siblings().hide(); 
+           };
+
+    $(this).click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+        $(".box>li").eq(index).show().siblings().hide();
+    });
+       }) 
+     })
+    </script>
+</body>
+</html>

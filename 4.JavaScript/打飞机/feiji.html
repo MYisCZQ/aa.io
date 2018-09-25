@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>微信经典飞机大战</title>
+    <link rel="stylesheet" href="feiji.css">
+</head>
+<body>
+<div id="content">
+    <div id="start">
+        <button onclick="start()">开始游戏</button>
+    </div>
+    <div id="main">
+        <div id="score">0</div>
+        <div id="suspend">
+            <button id="continue">继续游戏</button>
+            <button id="restart" onclick="restart()">重新开始</button>
+        </div>
+    </div>
+    <div id="settlement">
+        <p id="final-text">飞机大战分数</p>
+        <p id="final-score">1000</p>
+        <button onclick="restart()">重新开始</button>
+    </div>
+</div>
+
+<script src="feiji.js"></script>
+</body>
+</html>

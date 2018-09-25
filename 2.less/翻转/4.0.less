@@ -1,0 +1,207 @@
+body{
+    margin: 0;
+}
+.background{
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background: linear-gradient(120deg, rgba(50, 150, 100, 0.4), rgba(0, 0, 100, 0));
+    overflow: hidden;
+    perspective: 1500px;
+}
+.card h2{
+    margin-top: 60px;
+        color: white;
+        font-size: 40px;
+        font-weight: 300;
+        transition: all .3s;
+    + p{
+        color:white;
+        font-size: 20px;
+        margin-top: -10px;
+        transition: all .3s;
+    }
+}
+  h3{
+      color: white;
+      font-size: 30px;
+      font-weight: 300;
+  }
+input{
+    display: none;
+  + .card{
+      width: 300px;
+      height: 400px;
+      margin: auto;
+      position: absolute;
+      top:0px;
+      left:0px;
+      bottom: 0px;
+      right: 0px;
+      text-align: center;
+      transform-style: preserve-3d;
+      transition: all 0.3s;
+      border-radius: 20px;
+      transform-origin: 50% 50% 200px;
+
+
+     &::after{
+         .layer;
+         background: black;
+          z-index: -2;
+         transition: inherit;
+         border-radius: inherit;
+     }
+
+     .layer{
+         content: "";
+         width: 100%;
+         height: 100%;      
+         position: absolute;
+         display: block;
+         top: 0px;
+         left:0px;         
+     }
+.photo{
+    .layer;
+    background: url("img/600x600.jpg") no-repeat;
+    background-size: cover;
+    z-index: -1;
+    border-radius: inherit;
+
+
+    &::before{
+        .layer;
+        background:rgba(255, 255, 0, 0); 
+        border-radius: inherit;
+        transition: inherit;
+       
+    }
+}
+.chart{
+    font-size: 0;
+}
+.bar{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    // background: red;
+    font-size: 12px;
+    margin: 10px;
+    transform: rotate(-60deg);
+    transform-style: preserve-3d;
+    position: relative;
+    text-align: center;
+    line-height: 20px;
+    transition: all 0.3s;
+
+    &::before{
+        .layer;
+        content: "";
+        background: rgb(224, 220, 220);
+        transform-origin: 50% 0 0;
+        transform: translateY(20px) rotateX(90deg);
+        height: 0px;
+        transition: inherit;
+    }
+    &::after{
+        .layer;
+        content: "O";
+        background: white;
+        // transform: translateZ(0px);
+         transition: inherit;
+
+    }
+    span{
+        width:0px;
+        display: block;
+        background: rgb(224, 220, 220);
+        transform-origin: 0 50% 0;
+        transform: rotateY(-90deg);
+        position: absolute;
+        top: 0px;
+        left: 0;
+        transition: inherit;
+    }
+}
+
+    .bar1 {transition: all 0.003s * @span1;}
+    .bar2 {transition: all 0.003s * @span2;}
+    .bar3 {transition: all 0.003s * @span3;}
+    .bar4 {transition: all 0.003s * @span4;}
+    .bar5 {transition: all 0.003s * @span5;}
+    .bar6 {transition: all 0.003s * @span6;}
+    .bar7 {transition: all 0.003s * @span7;}
+}
+}
+
+ 
+
+@span1: 100;
+@span2: 130;
+@span3: 90;
+@span4: 120;
+@span5: 170;
+@span6: 80;
+@span7: 160;
+
+input:checked {  
+    +.card h2{transform: translateZ(-2px);}
+    +.card p{transform: translateZ(-2px);}
+    +.card h3{ transform: translateZ(10px);}
+
+}
+
+
+input:checked{
+    +.card{
+        transform: rotateX(61deg)translateZ(100px);
+
+        &::after {
+            transform: translateZ(-20px);
+        }
+        .photo{
+            &::before{
+                background: rgba(46, 129, 224, 0.4);
+            }
+        }
+
+        .chart {
+            .bar1 {
+                &::before {height: @span1 * 1px;}
+                &::after {transform: translateZ(@span1 * 1px);}
+                span { width: @span1 * 1px;}
+            }
+            .bar2 {
+                &::before {height: @span2 * 1px;}
+                &::after {transform: translateZ(@span2 * 1px);}
+                span { width: @span2 * 1px;}
+            }
+            .bar3 {
+                &::before {height: @span3 * 1px;}
+                &::after {transform: translateZ(@span3 * 1px);}
+                span { width: @span3 * 1px;}
+            }
+            .bar4 {
+                &::before {height: @span4 * 1px;}
+                &::after {transform: translateZ(@span4 * 1px);}
+                span { width: @span4 * 1px;}
+            }
+            .bar5 {
+                &::before {height: @span5 * 1px;}
+                &::after {transform: translateZ(@span5 * 1px);}
+                span { width: @span5 * 1px;}
+            }
+            .bar6 {
+                &::before {height: @span6 * 1px;}
+                &::after {transform: translateZ(@span6 * 1px);}
+                span { width: @span6 * 1px;}
+            }
+            .bar7 {
+                &::before {height: @span7 * 1px;}
+                &::after {transform: translateZ(@span7 * 1px);}
+                span { width: @span7 * 1px;}
+            }
+        }
+    }
+}

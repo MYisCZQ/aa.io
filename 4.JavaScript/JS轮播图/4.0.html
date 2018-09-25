@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class=" top">
+			<span class="active">1</span>
+			<span class="active">2</span>
+			<span class="active">3</span>
+			
+			
+			<div class="box1">
+			<img src="img/1.jpg" alt="" />
+			</div>
+			<div class="box2">
+				<img src="img/2.jpg" alt="" />
+			</div>
+			<div class="box3">
+				<img src="img/3.jpg" alt="" />
+				
+			</div>
+			
+		</div>
+		<style type="text/css">
+			
+			.top{
+				margin: 100px 500px;
+			}
+			span{
+				text-align: center;
+				background: red;
+				width: 40px;
+				height: 40px;
+				display: inline-block;
+				font-size: 0;
+				border-radius: 50%;
+				position: relative;
+				top:390px;
+				left:100px;
+				margin-left: 20px;
+				color: white;
+			}
+			
+			span:first-of-type{
+				background: orange;
+			}
+			div[class^=box]{
+				width: 400px;
+				height: 400px;
+				display: none;
+			}
+			div[class^=box] img{
+				width: 100%;
+			}
+			div[class^=box]:first-of-type{
+				display: block;
+			}
+			
+		</style>
+	    <script>
+	    	
+	    	var top=document.getElementsByClassName("top")[0];
+	    	var boxs=document.querySelectorAll('.top div');
+	    	
+	       var spans=document.querySelectorAll('.top span');
+	       
+	       
+	       for (var i = 0; i < spans.length; i++) {
+	       	spans[i].index=i;
+	       }
+	       
+	       for(var i=0; i<spans.length;i++){
+	       	spans[i].onclick=function(){
+	       		for (var i = 0; i < spans.length; i++) {
+	       			spans[i].style.background='red';
+	       		}	
+	       		this.style.background='orange';
+	       		
+	       		for (var i = 0; i < boxs.length; i++) {
+	       			boxs[i].style.display='none';
+	       		}
+	       		boxs[this.index].style.display='block';
+	       	                 
+	       	}
+	       	
+	       }
+	    </script>	
+	
+	</body>
+</html>

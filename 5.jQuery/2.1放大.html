@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.js"" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <style>
+    .top{
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+    }
+    .top img{
+        width: 100%;
+    }
+    .zoom{
+        width: 100px;
+        height: 100px;
+        background: rgba(216, 197, 181, 0.6);
+       position: absolute;
+       top:0px;
+       left: 100px;
+       border: 1px solid gainsboro;
+    }
+     .xxx {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+    .BOX{
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+        margin: 0 auto;
+        border: 1px solid gray;
+        position: relative;
+    }
+    .BOX img{
+        width: 800px;
+        height: 800px;
+       position: absolute; 
+       top: -50px;
+      left: -50px;
+
+    }
+    </style>
+    <div class="top">
+        <img src="img/1.jpg">
+        <div class="zoom"></div>
+        <div class="xxx"> </div>
+    </div>
+
+    <div class="BOX">
+            <img src="img/1.jpg">
+    </div>
+
+    <script>
+        //放大倍数=BOX.img/top.img
+     var magnification = $('.BOX img').width() / $('.top img').width();
+    $('.top .xxx').mousemove(function(e){
+            var x = e.offsetX;
+            var y=e.offsetY;
+            // console.log(e.offsetX + '/' + e.offsetY)
+            if(e.offsetX <=50){
+                x=50;
+            }
+            if(e.offsetX>=150){
+                x=150;
+            }
+            if(e.offsetY<=50){
+                y=50;
+            }
+            if(e.offsetY>=150){
+                y=150;
+            }
+        
+        
+        $('.zoom').css({
+            // top: e.offsetY-$('.zoom').innerHeight()/2,
+            // left: e.offsetX-$('.zoom').innerWidth()/2,
+
+            top: y-50,
+            left: x-50,
+          
+           
+        })
+        $('.BOX img').css({
+                top: (y - 50) * -magnification,
+                left: (x - 50) * -magnification
+            });
+
+    });
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

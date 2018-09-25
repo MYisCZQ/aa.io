@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    background: lightblue;
+   
+}
+li{
+    list-style: none;
+    text-align: center;
+}
+.content{
+     width: 400px;
+     height: 300px;
+     /* background: red; */
+     /* display: inline-block; */
+     margin: 0 auto;
+}
+.top{
+    width: 100%;
+   line-height: 50px;
+    display: inline-block;
+    border:1px solid green;
+    background: orange;
+}
+.top li{
+    width: 25%;
+    float: left;
+    height: 100%;
+  
+}
+.top .active{
+    background: green;
+    color: white;
+}
+.box{
+   height: 250px;
+    width: 400px;
+    margin-top: -6px;
+    border:1px solid green;
+    background: green;
+    color: white;
+}
+.box li{
+     margin-top:110px;
+}

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.top{
+				
+				background: url(../img/农业/banner.jpg);
+				background-size: cover;
+                padding-top: 15px;
+                height: 450px;
+			}
+			.A{
+				margin: 0 auto;
+				overflow: hidden;
+				width: 1140px;
+				height: 60px;
+				background: rgba(0,0,0,0.41);
+			}
+			.A ul li{
+				float: left;
+				color: white;
+				line-height: 54px;
+			}
+			.A ul li:after{
+				content:'/';
+			}
+			.A ul li:last-of-type:after{
+				content:'';
+			}
+			
+			.A ul li a:hover{
+				transition: all 1s;
+				color: yellow;
+				/*transform: all 2s;*/
+				border-top: 4px solid yellow;
+				
+			}
+			.A ul li a{
+				text-decoration: none;
+				color: white;
+				margin: 15px 15px;
+			}
+			.A ul{
+				margin: 0;
+				list-style: none;
+				padding: 0;
+			}
+			.A1{
+				float: left;
+			}
+			.A2{
+				float: right;
+			}
+			.A2 form{
+				line-height: 54px;
+			}
+			/*.A2 input:nth-of-type(2):hover{
+				border: 0 solid white;
+			}*/
+			.A2 input:nth-of-type(1){
+				background: rgba(0,0,0,0.41);
+				padding: 5px 10px;
+				border: 1px solid white;
+				color: white;
+				outline:none ;
+				line-height: 28px;
+			}
+			.A2 input:nth-of-type(2){
+				background: url(../img/农业/search.png);
+				width: 22px;
+				height: 22px;
+				background-position: center;
+				border: none;
+               position: relative;
+               top: 5px;
+               right:35px;
+               
+			}
+			.cen{   
+				/* text-align: center;*/
+				 width: 20%;
+				    border-top: 5px solid#fff;
+                    border-bottom: 5px solid#fff;
+                   margin: 0 auto;
+                   margin-top: 140px;
+			}
+			.cen a{
+				text-decoration: none;
+				font-size: 60px;
+				color: white;
+				display: inline-block;
+				
+			}
+			.one{
+				width: 1140px;
+				height: 54px;
+				margin: 0 auto;
+				margin-top:220px ;
+			}
+			.one h3{
+				text-align: center;
+				font-size: 40px;
+				color: #394c53;
+			}
+			.two{
+				width: 1140px;
+				margin: 0 auto;
+				margin-top: 200px;
+			}
+			.two1{
+				/*text-align: center;*/
+				width: 1140px;
+				padding-left: 15px;
+			}
+			.two11{
+				width: 371px;
+				float: left;
+			}
+			.two1 input[type="text"]{
+				border:  1px solid rgba(0,0,0,0.1);
+				width: 320px;
+				/*height: 50px;*/
+				padding: 16px;
+			}
+			.two1 input[type="text"]:hover{
+				border:  1px solid #d4a258;
+			}
+			.two span{
+				font-size: 20px;
+               font-weight: 600;
+			}
+			.two2{
+				padding-top: 100px;
+			}
+			
+			.two2 textarea[type="text"]{
+				
+				width: 100%;
+				border:  1px solid rgba(0,0,0,0.1);
+				min-height: 320px;
+				padding: 20px;
+				/*margin-top: 50px;*/
+				
+			}
+			.two2 textarea[type="text"]:hover{
+				border:  1px solid #d4a258;
+			}
+			.two2 input[type="submit"]{
+				width: 136px;
+				height: 46px;
+				background: green;
+				margin-top: 10px;
+				
+			}
+			.two2 input[type="submit"]:hover{
+				transition: all 1s;
+				background: orange;
+			}
+			
+			.onee{
+					background: #3f454d;
+					margin-top: 100px;
+					
+				}
+				.twoe{
+					width: 1140px;
+					margin: 0 auto;
+					height: 420px;
+				}
+				.onee1{
+					width: 350px;
+					height: 400px;
+					overflow: hidden;
+					float: left;
+				}
+				.onee1 h3{
+					color: white;
+					font-size: 40px;
+				    margin-bottom: 16px;
+				    font-family: 'Josefin Sans', sans-serif;
+                     font-weight: 600;
+				}
+				.onee2 h3{
+					color: white;
+					font-size: 40px;
+					 margin-bottom: 16px;
+				    font-family: 'Josefin Sans', sans-serif;
+                     font-weight: 600;
+                     margin-left:40px ;
+					
+				}
+				.onee2{
+					width: 350px;
+					height: 400px;
+					float: left;
+					margin:0px 15px;
+				}
+				.onee3{
+					width: 350px;
+					height: 400px;
+					float: left;
+					padding-left: 40px;
+					
+					/*margin:0px 15px;*/
+				}
+				.up1{
+					overflow: hidden;
+					width: 350px;
+					height: 75px;
+					padding: 10px;
+					
+				}
+				.onee3 h3{
+					color: white;
+					font-size: 40px;
+					 margin-bottom: 16px;
+				    font-family: 'Josefin Sans', sans-serif;
+                     font-weight: 600;
+                     margin-left:40px ;
+					
+				}
+				.upimg img{
+					width: 73px;
+					height: 73px;
+					float: left;
+				}
+				.uptext{
+					margin-bottom: 10px;
+					width: 265px; 
+					height: 74px;
+					float: left;
+				   margin-left: 10px;					
+				}
+				.uptext a{
+                   color: #fff;
+                 margin-bottom: 2px;
+               text-decoration: none;
+				}
+				.uptext p{
+					line-height:20px;
+                         color: #999;
+				}
+				.uptext a:hover{
+					color: yellow;
+				}
+				.onee2 ul li{
+					line-height: 34px;
+					color: #999;
+                  list-style: none;
+                  padding-left: 25px;
+                  background: url(../img/农业/list-arrow.png) no-repeat 6px 14px;
+                
+				}
+				.onee2 ul li:hover{
+					color: yellow;
+				}
+				.onee3 ul{
+					padding-left: 30px;
+					line-height: 24px;
+				}
+				.onee3 ul li.a{
+					width: 40px;
+					height: 40px;
+					display: inline-block;
+					background: url(../img/农业/img-sprite1.png) -220px 0px;
+				}
+				.onee3 ul li.b{
+					width: 40px;
+					height: 40px;
+					display: inline-block;
+					background: url(../img/农业/img-sprite1.png) -261px 0px;
+				}
+				.onee3 ul li.ab{
+					width: 40px;
+					height: 40px;
+					display: inline-block;
+					background: url(../img/农业/img-sprite1.png) -302px 0px;
+				}
+				.onee3 ul li{
+					padding-top: 4px;
+					padding-left: 2px;
+					list-style: none;
+					color: #999;
+					font-size: 14px;
+					line-height: 14px;
+					display: inline-block;
+				}
+			
+			.zdb{
+				background: red;
+			}
+			.zu{
+				width: 1140px;
+				height: 60px;
+				margin: 0 auto;
+				/*background: red;*/
+				text-align: center;
+				margin-top: 20px;
+			}
+			.zu i{
+				width: 55px;
+				height: 55px;
+				background:url(../img/农业/img-sprite1.png) ;
+				background-repeat: no-repeat;
+				display:inline-block;
+				margin: 2px 10px ;
+				
+				
+			}
+			i:nth-of-type(1){
+				background-position: 0px 0px;
+			}
+			i:nth-of-type(2){
+				background-position: -55px 0px;
+			}
+			i:nth-of-type(3){
+				background-position: -110px 0px;
+			}
+			i:nth-of-type(4){
+				background-position: -165px 0px;
+			}
+			.dzb{
+				height: 55px;
+				width: 1140px;
+				margin: 0 auto;
+				
+				
+				
+			}
+			.dzb ul {
+				text-align: center;
+			}
+			.dzb ul li a{
+				list-style-type: none;
+				text-decoration: none;
+				width: 32px;
+				height: 16px;
+				color: black;
+				cursor:pointer
+				
+			}
+			.dzb ul li {
+				margin: 10px;
+				text-decoration: none;				
+				display:inline-block;
+				font-size: 16px;
+				
+			}
+			.zzdd{
+				width:1140px ;
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+			.zzdd p{
+				text-align: center;
+				font-size: 16px;
+			}
+			.zzdd a{
+				 text-decoration: none;	
+				 color: yellowgreen; 
+				 font-size: 19px;
+			}
+			.zzdd a:hover{
+				font-size: 19px;
+               color: #000;
+              font-weight: 400;
+              text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="A">
+				<div class="A1">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html">About</a></li>
+					<li><a href="index.html">Services</a></li>
+					<li><a href="index.html">Products</a></li>
+					<li><a href="index.html">Blog</a></li>
+					<li><a href="Contact.html">Contact</a></li>
+					
+				</ul>
+				</div>
+				<div class="A2">
+					<form>
+					<input type="text" value="Search.."  onclick="this.value=''" />
+					<input type="submit"  value=""/>
+					</form>
+				</div></div>
+				<div class="cen"><a href="Contact.html">Cultivation</a></div>
+			   <div class="one"><h3>Contact Us</h3></div>
+			   
+			   
+			   <div class="two">
+			   	<form>
+			   		<div class="two1">
+			   			<div class="two11">
+			   			<span>Name :</span><br />
+			   			<input type="text"  value=""/>
+			   			</div>
+			   			<div class="two11">
+			   			 <span>Email :</span><br />
+			   			<input type="text"  value=""/>
+			   			</div>
+			   			<div class="two11">
+			   			<span>Subject :</span><br />
+			   			<input type="text"  value=""/>
+			   			</div>
+			   	</div>
+			   	<div class="two2">
+			   			<span>Message :</span><br />
+			   			<!--<input type="text"  value=""/>-->
+			   			<textarea type="text"  value=""/ ></textarea>
+			   			<br />
+			   			<input type="submit" value="SEND" />
+			   		</div>
+			   		
+			   	</form>
+			   </div>
+			
+			<div class="onee">
+			   	<div class="twoe">
+			   		
+			   		
+			   		<div class="onee1">
+			   		<h3>Upcome Events</h3>
+			   		<div class="up1">
+			   			<div class="upimg"><img src="../img/农业/im1.jpg"/></div>
+			   			<div class="uptext">
+			   				<a href="index.html">sagittis magna</a>
+			   				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			   			</div>
+			   		</div>
+			   		<div class="up1">
+			   			<div class="upimg"><img src="../img/农业/im2.jpg"/></div>
+			   			<div class="uptext">
+			   				<a href="index.html">Integer molest</a>
+			   				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			   			</div>
+			   		</div>
+			   		<div class="up1">
+			   			<div class="upimg"><img src="../img/农业/im3.jpg"/></div>
+			   			<div class="uptext">
+			   				<a href="index.html">Fusce suscipit</a>
+			   				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			   			</div>
+			   		</div>			   				
+			   			</div>	
+			   				
+			   	 <div class="onee2">
+			   	 	<h3>Categories</h3>
+			   	 	<ul>
+			   	 		<li>Praesent vestim molestie lacus</li>
+			   	 		<li>Cras consequat iaculis lorem</li>
+			   	 		<li>Consectetur adipiscing iaculis</li>
+			   	 		<li>Lorem ipsum dolor sit</li>
+			   	 		<li>Cum sociis natoque penatibus et magnis</li>
+			   	 		<li>Integer molestie lorem</li>
+			   	 		<li>lorem,Cras consequat iaculis id vehicula</li>
+			   	 	</ul>
+			   	 </div>			
+			   	
+			   	<div class="onee3">
+			   		<h3>Contact</h3>
+			   		<ul>
+			   			<li class="a"></li>
+			   			<li> <p>1-000-000-0000</p>
+			   				<p>1-000-000-0000</p>
+			   			</li>
+			   		</ul>
+			   		<ul>
+			   			<li class="b"></li>
+			   			<li><p>Seventh Avenue</p>
+			   				<p>Chelsea, Manhattan</p>
+			   			</li>
+			   		</ul>
+			   		<ul>
+			   			<li class="ab"></li>
+			   			<li><p>bcdefg@hijs.dfh</p>
+			   				<p>fjashfaf@jkfs.ckd</p>
+			   			</li>
+			   		</ul>
+			   		
+			   	</div>
+			   	
+			   		</div>			   			
+			   </div>
+			
+			<div class="zdb"></div>
+		<div class="zu">
+			<i></i>
+			<i></i>
+			<i></i>
+			<i></i>			
+		</div>
+     <div class="dzb">
+     	<ul>
+     		<!--<li>Home</li>
+     		<li>About</li>
+     		<li>Services</li>
+     		<li>Products</li>
+     		<li>Blog</li>
+     		<li>Contact</li>-->
+     		<li><a href="index.html">Home</a></li>
+     		<li><a href="index.html">About</a></li>
+     		<li><a href="index.html">Services</a></li>
+     		<li><a href="index.html">Products</a></li>
+     		<li><a href="index.html">Blog</a></li>
+     		<li><a href="index.html">Contact</a></li>
+     	</ul>
+     	
+     </div>		
+		<div class="zzdd">
+			<p>Copyright © 2015.Company name All rights reserved.More Templates<a href="index.html"> 模板之家 </a>- Collect from <a href="index.html">网页模板</a></p>
+		</div>
+		
+		
+		</div>
+			   
+	</body>
+</html>

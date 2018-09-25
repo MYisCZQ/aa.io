@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="tab-content">
+    <div class="tab-controls">
+        <li class="active xxx">我是老大</li>
+        <li class="xxx">我是老二</li>
+        <li class="xxx">我是老三</li>
+        <li class="xxx">我是老四</li>
+    </div>    
+     <div class="tab-items">
+        <li class="active">hello我是老大</li>
+        <li>hello我是老二</li>
+        <li>hello我是老三</li>
+        <li>hello我是老四</li>
+    </div>
+</div>
+   <style type="text/css"d>
+   	body{
+   		margin: 0;
+   		background: lightblue;
+   	}
+   	li{
+   		list-style: none;
+   	}
+   	 .tab-content {
+        width: 400px;
+        margin: 0 auto;
+        color: white;
+    }
+   	.tab-controls{
+   		  width: 400px;
+   		  height: 50px;
+   		  display: inline-block;
+   		
+   	}   
+   	.tab-controls li{
+   		width: 25%;
+   		float: left;
+   		line-height: 50px;
+   		text-align: center;
+   		background: orange;
+   		
+   	}
+   	.tab-controls li.active{
+   		background:green;
+   	}
+   	.tab-items{
+   		width: 400px;
+   		line-height: 200px;
+   		position: relative;
+   		margin-top: -5px;
+   	}
+   	.tab-items li{
+   		width: 400px;
+   		position: absolute;
+   		top:0px;
+         left: 0px;
+   		text-align: center;
+   		line-height: 200px;
+   		background: green;
+   		display: none;
+   	}
+   	.tab-items li.active{
+   		background: green;
+   		display: block;
+   	}  	
+   </style>
+   <script>
+   	  var tabControls=document.querySelectorAll('.tab-controls li');
+   	  var tabItems=document.querySelectorAll('.tab-items li');
+   	  
+   	 
+   	var addClass = function (element, className) {
+        var oldClass = element.className;
+        var classArray = oldClass.split(' ');
+        if (classArray.indexOf(className) === -1) {
+            classArray.push(className);
+        }
+        element.className = classArray.join(' ').trim();
+    };
+   	 
+	       for (var i = 0; i < tabControls.length; i++) {
+	       	tabControls[i].index=i;
+	       }
+	       
+	       for(var i=0; i<tabControls.length;i++){
+	       	tabControls[i].onclick=function(){
+	       		for (var i = 0; i < tabControls.length; i++) {
+	       			tabControls[i].style.background='orange';
+	       		}	
+	       		this.style.background='green';
+	       		
+	       		for (var i = 0; i < tabItems.length; i++) {
+	       			tabItems[i].style.display='none';
+	       		}
+	       		tabItems[this.index].style.display='block';
+	       	}
+	       		
+	       }
+
+   </script>
+
+	</body>
+</html>

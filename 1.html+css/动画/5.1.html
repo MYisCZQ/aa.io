@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body  background="img/background.jpg">  
+		
+			<div class="top">
+				<div class="box">
+					<div class="img1"></div>
+					<div class="box1">
+						<h4>DUENDE</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed vestibulum.
+						</p>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img2"></div>
+					<div class="box2">
+						<h4>DUENDE</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed vestibulum.
+						</p>
+					</div>
+				</div>
+				<div class="box">
+					<div class="img3"></div>
+					<div class="box3">
+						<h4>DUENDE</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed vestibulum.
+						</p>
+					</div>
+				</div>
+			</div>
+
+          <style type="text/css">
+          	body{
+          		padding: 0;
+         	   margin: 0;
+          	}
+          	h4{
+          		font-size: 20px;
+               color: #fff;
+              text-transform: uppercase;
+              padding-top: 40px;
+          	}
+          	h4:after{
+          		content: "";
+                width: 80%;
+                display: block;
+               border-bottom: 2px solid #fff;
+               margin: 20px auto;
+          	}
+          	p{
+          		font-size: 14px;
+               line-height: 24px;
+                color: #fff;
+          	}
+          	p:after{
+          		content: '';
+          		width: 80%;
+          		display: block;
+               border-bottom: 2px solid #fff;
+                margin: 20px auto;
+          	}
+         .top{
+         	width: 1500px;
+         	height: 388px;
+         /*	background: gray;*/
+         	display: block;
+         	margin: 50px auto;
+         }
+          .box{
+          	width: 360px;
+          	height: 360px;
+          	display: inline-block;
+          	/*background: #008000;*/
+          	margin: 15px 68px; 
+          	position: relative;  
+          	text-align: center;       	
+          }	
+         .box .img1{
+         	width: 360px;
+         	height: 360px;
+         	display: block;
+         	background: url(img/1.jpg);
+         	background-size: 360px 360px;
+         	transition: all 1s;
+         }
+         .box1{
+         	width: 360px;
+         	height: 360px;
+         	position: absolute;
+         	top:0px;
+         	display:block;
+         	background: rgba(0,0,0,0.7);
+         	transform: rotateY(90deg);
+         	-webkit-transform: rotateY(90deg);
+         	transition: all 1s;
+         }
+          .box .img2{
+         	width: 360px;
+         	height: 360px;
+         	display: block;
+         	background: url(img/2.jpg);
+         	background-size: 360px 360px;
+         	transition: all 1s;
+         }
+          .box2{
+         	width: 360px;
+         	height: 360px;
+         	position: absolute;
+         	top:0px;
+         	display:block;
+         	background: rgba(0,0,0,0.7);
+         	transform: rotateY(90deg);
+         	-webkit-transform: rotateY(90deg);
+         	transition: all 1s;
+         }
+          .box .img3{
+         	width: 360px;
+         	height: 360px;
+         	display: block;
+         	background: url(img/3.jpg);
+         	background-size: 360px 360px;
+         	transition: all 1s;
+         }
+          .box3{
+         	width: 360px;
+         	height: 360px;
+         	position: absolute;
+         	top:0px;
+         	display:block;
+         	background: rgba(0,0,0,0.7);
+         	transform: rotateY(90deg);
+         	-webkit-transform: rotateY(90deg);
+         	transition: all 1s;
+         }
+         .box:nth-of-type(1):hover .img1{
+         	transform: rotateY(90deg);
+         	-webkit-transform: rotateY(90deg);
+         }
+         .box:nth-of-type(1):hover .box1{
+         		transform: rotateY(0deg);
+         	-webkit-transform: rotateY(0deg);
+         }
+          .box:nth-of-type(2):hover .img2{
+         	transform: rotateY(90deg);
+         	-webkit-transform: rotateY(90deg);
+         }
+         .box:nth-of-type(2):hover .box2{
+         		transform: rotateY(0deg);
+         	-webkit-transform: rotateY(0deg);
+         }
+          .box:nth-of-type(3):hover .img3{
+         	transform: rotateY(90deg);
+         	-webkit-transform: rotateY(90deg);
+         }
+         .box:nth-of-type(3):hover .box3{
+         		transform: rotateY(0deg);
+         	-webkit-transform: rotateY(0deg);
+         }
+          	
+          </style>
+		
+		
+	</body>
+</html>

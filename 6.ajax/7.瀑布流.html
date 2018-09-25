@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" /> 
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3 col001"></div>
+      <div class="col-xs-3 col002"></div>
+      <div class="col-xs-3 col003"></div>
+      <div class="col-xs-3 col004"></div>
+    </div>
+    <button type="button" class="btn btn-danger center-block more" onclick="getdate()">（危险）Danger</button>
+  </div>
+
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Large modal</button>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <img src="" alt="" class="img-thumbnail">
+        <button type="button" class="btn btn-warning pull-left" onclick="prev()">上一张</button>
+        <button type="button" class="btn btn-warning pull-right" onclick="next()">下一张</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="demo"></div>
+  <img src="" alt="">
+  <!-- <script>
+    $('.demo').load("./asset/data/ajax_info.txt #p1");
+  </script> -->
+
+  <!-- <script>
+    var pagenum = 1;
+
+    function getdate() {
+
+      // $.get("https://www.apiopen.top/meituApi?page=1",
+      $.get("https://www.apiopen.top/meituApi", {
+          'page': pagenum,
+        },
+        function (shuju, textStatus, xhr) {
+          console.log(shuju);
+          // console.log(textStatus);
+          // console.log(xhr);
+          var x = shuju;
+          $.each(x.data, function (index, item) {
+            // console.log(item.url)
+            $('.demo').append('<img src="' + item.url + '">');
+          })
+        },
+      );
+
+      pagenum++;
+    }
+  </script> -->
+
+  <script>
+    var pagenum = 1;
+
+    function getdate() {
+
+      // $.get("https://www.apiopen.top/meituApi?page=1",
+      $.get("https://www.apiopen.top/meituApi", {
+          'page': pagenum,
+        },
+        function (shuju, textStatus, xhr) {
+          console.log(shuju);
+          // console.log(textStatus);
+          // console.log(xhr);
+          var x = shuju;
+          $.each(x.data, function (index, item) {
+            // console.log(item.url)
+            var newImg = '<img src="' + item.url +
+              '" class="img-thumbnail" data-toggle="modal" data-target="#exampleModal">';
+            if (index % 4 === 0) {
+              $('.col001').append(newImg);
+            } else if (index % 4 === 1) {
+              $('.col002').append(newImg);
+            } else if (index % 4 === 2) {
+              $('.col003').append(newImg);
+            } else if (index % 4 === 3) {
+              $('.col004').append(newImg);
+            }
+          })
+        },
+      );
+
+      pagenum++;
+    }
+
+    getdate();
+
+
+    var button;
+
+    $('#exampleModal').on('show.bs.modal', function (event) {
+      button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient = button.attr('src') // Extract info from data-* attributes
+      console.log(recipient)
+
+      var modal = $(this);
+      modal.find('img').attr('src', recipient);
+    })
+    //下一张
+    function next() {
+
+      if (button.next().length) {
+        button = button.next();
+      } else {
+        button = button.parent().next().children().first();
+      }
+      var recipient = button.attr('src')
+
+      $('.modal').find('img').attr('src', recipient);
+    }
+
+    //  上一张
+    function prev() {
+
+      if (button.prev().length) {
+        button = button.prev();
+      } else {
+        button = button.parent().prev().children().first();
+      }
+      var recipient = button.attr('src')
+
+      $('.modal').find('img').attr('src', recipient);
+    }
+
+    // 滚动监听
+    var scrollDone = true;
+    document.body.onscroll = function (ev) {
+      if (window.pageYOffset > ($('.more').offset().top - window.innerHeight + $('.more').height())) {
+        if (scrollDone === true) {
+          scrollDone = false;
+          getdate();
+          setTimeout(function () {
+            scrollDone = true;
+          }, 1000);
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .container {
+      background: black;
+    }
+
+    .modal img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .modal-content{
+  position: relative;
+    }
+    .modal-content .pull-left{
+        position: absolute;
+        left:-40px;
+        top:50%;
+    }
+
+   .modal-content .pull-right{
+       position: absolute;
+        right:-40px;
+        top:50%;
+   }
+  </style>
+</body>
+
+</html>

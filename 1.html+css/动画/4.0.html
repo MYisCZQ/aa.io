@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div class="run"></div>
+
+		<style type="text/css">
+			.run {
+				margin: 0 auto;
+				width: 180px;
+				height: 300px;
+				background: url("img/sprites.png");
+				
+				animation-name: run;
+				animation-duration: 1s;
+				animation-timing-function: steps(7,start);
+				animation-iteration-count:infinite;
+			}
+			@keyframes run {
+				0% {background-position-x: 180px;}
+				100% {background-position-x: 100%;}
+			}
+			@keyframes run{
+				0%{
+					background-position-x: 180px;}
+					100%{
+						background-position-x: 100%;}
+					
+				}
+			}
+		</style>
+		
+		<hr />
+		
+		<div class="box"></div>
+		<style type="text/css">
+			.box{
+				margin: 0 auto;
+				width: 76.5px;
+				height: 81px;
+				background: url("img/sprites-IORI.jpg");
+				animation-name: box;
+				animation-duration: 3s;
+				animation-timing-function: steps(26,start) ;
+				animation-iteration-count:infinite;
+				}
+				@keyframes box{
+				0%{
+					background-position-x: 0;}
+					100%{
+						background-position-x: 100%;}
+					
+				}x
+				
+			
+		</style>
+
+	</body>
+</html>

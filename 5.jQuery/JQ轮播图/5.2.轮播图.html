@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery.js"" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+        <div class="carousel">
+                <div class="carousel-content">
+                    <li class="a">  <img src="img/jq/317819.jpg"></li>
+                    <li class="b"> <img src="img/jq/318621.jpg"></li>
+                    <li class="c"> <img src="img/jq/307113.jpg"></li>
+                    <li class="d"> <img src="img/jq/317713.jpg"></li>
+                </div>
+                <div class="carousel-control">
+                    <span class="prev"><img src="img/jq/154.png"></span>
+                    <span class="next"><img src="img/jq/153.png"></span>
+                </div>
+                <div class="carousel-pagination"></div>
+            </div> 
+            <style>
+                    body {
+                        margin: 0;
+                    }
+            
+                    li {
+                        list-style: none;
+                    }
+            
+                    .carousel {
+                        width: 800px;
+                        height: 400px;
+                        background: red;
+                        margin: 100px auto;
+                        overflow: hidden;
+                        position: relative;
+                    }
+            
+                    .carousel .carousel-content {
+                        width: 3200px;
+                        /* transition: all 3s; */
+                        margin-top: 0;
+                    }
+            
+                    .carousel .carousel-content li {
+                        width: 800px;
+                        height: 400px;
+                        float: left;
+                       
+                    }
+                    .carousel .carousel-content li img{
+                        width: 800px;
+                        height: 400px;
+                        background-size: 800px 400px;
+                    }
+            
+                    .carousel .carousel-control {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        height: 36px;
+                    }
+            
+                    /* .carousel .carousel-control span {
+                        line-height: 36px;
+                        display: inline-block;
+                    } */
+            
+                    .carousel .carousel-control span.prev {
+                        float: left;
+                    }
+            
+                    .carousel .carousel-control span.next {
+                        float: right;
+                    }
+            
+                    .carousel-pagination {
+                        text-align: center;
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                    }
+            
+                    .carousel-pagination i {
+                        width: 20px;
+                        height: 20px;
+                        display: inline-block;
+                        background: white;
+                        margin: 0 15px;
+                        border-radius: 50%;
+                    }
+            
+                    .carousel-pagination i.active {
+                        background: red;
+                    }
+                </style>
+
+     <script>
+     // 根据图片的个数生成对应的小圆点
+       // 根据图片的个数生成对应的小圆点
+       $('.carousel-content li').each(function () {
+            $('.carousel-pagination').append('<i></i>');
+        });
+        //把第一个高亮
+        $('.carousel-pagination i').first().addClass('active');
+
+        var old = $('.carousel-content li');
+
+        $('.carousel-pagination i').click(function () {
+            // 当前第一个图片的索引值（按照老的）
+
+            $(this).addClass('active').siblings().removeClass('active')
+
+            if ($(this).index() > old.index($('.carousel-content li:eq(0)'))) {
+
+                // 根据点击的小圆点的索引找到对应的图片 并把它移动到第一张的后面
+                old.eq($(this).index()).insertAfter('.carousel-content li:eq(0)');
+
+                //jq内置动画吧content向左移动 一个图片的宽度 
+                $('.carousel-content').animate({
+                    'margin-left': '-800px'
+                }, 1000, function () {
+                    // 等动画执行完成之后在把content的外边距重置为0，并把第一张图片移动到最后面
+                    $('.carousel-content').css('margin-left', '0').find('li').eq(0).appendTo(
+                        '.carousel-content');
+                })
+
+            } else if ($(this).index() < old.index($('.carousel-content li:eq(0)'))) {
+                // console.log('从左到右')
+                old.eq($(this).index()).insertBefore('.carousel-content li:eq(0)');
+                $('.carousel-content').css({
+                    'margin-left': '-800px'
+                }).animate({
+                    'margin-left': '0'
+                }, 1000)
+            }
+
+        });
+              
+        $('.next').click(function () {
+            var nextIndex = old.index($('.carousel-content li:eq(0)')) + 1;
+            if (nextIndex >= old.length) {
+                nextIndex = 0;
+            }
+            $('.carousel-pagination i').eq(nextIndex).addClass('active').siblings().removeClass('active');
+
+            old.eq(nextIndex).insertAfter('.carousel-content li:eq(0)');
+            //jq内置动画吧content向左移动 一个图片的宽度 
+            $('.carousel-content').animate({
+                'margin-left': '-800px'
+            }, 1000, function () {
+                // 等动画执行完成之后在把content的外边距重置为0，并把第一张图片移动到最后面
+                $('.carousel-content').css('margin-left', '0').find('li').eq(0).appendTo(
+                    '.carousel-content');
+            })
+
+        })
+        $('.prev').click(function () {
+            var prevIndex = old.index($('.carousel-content li:eq(0)')) - 1;
+            if (prevIndex < 0) {
+                prevIndex = old.length - 1;
+            }
+            $('.carousel-pagination i').eq(prevIndex).addClass('active').siblings().removeClass('active');
+            old.eq(prevIndex).insertBefore('.carousel-content li:eq(0)');
+
+
+
+            $('.carousel-content').css({
+                'margin-left': '-800px'
+            }).animate({
+                'margin-left': '0'
+            }, 1000)
+        })
+
+
+     </script>
+
+</body>
+
+</html>

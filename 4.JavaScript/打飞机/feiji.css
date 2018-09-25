@@ -1,0 +1,94 @@
+.body {
+  margin: 0;
+  padding: 0;
+}
+#content {
+  width: 320px;
+  height: 568px;
+  background: lightblue;
+  margin: 0 auto;
+  position: relative;
+}
+#content #start {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(img/background-start.png) no-repeat;
+}
+#content #start button {
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 30px;
+  background: #C4C9CA;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}
+#content #main {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(img/background-game.png) no-repeat;
+}
+#content #main #score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#content #main #suspend {
+  display: none;
+}
+#content #main #suspend button {
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 30px;
+  background: #C4C9CA;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  top: 60%;
+  z-index: 2;
+}
+#content #main #suspend button:first-child {
+  margin-top: -40px;
+}
+#content #main img {
+  position: absolute;
+}
+#content #settlement {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 60%;
+  box-sizing: border-box;
+}
+#content button {
+  width: 150px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 30px;
+  background: #C4C9CA;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}

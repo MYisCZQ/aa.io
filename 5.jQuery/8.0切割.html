@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="top">
+           <img src="img/1.jpg" class="xxx">
+          <div class="box">
+                <div class="left-top active"></div>
+                <div class="right-top active"></div>
+                <div class="left-bottom active"></div>
+                <div class="right-bottom active"></div>
+          </div>
+    </div>
+
+    <style>
+       .top{
+           width: 600px;
+           height: 600px;
+           margin: 100px 500px;
+           position: relative;
+       }
+       .top>img{
+            width: 300px;
+            height: 300px;
+            margin: 25%;
+       }
+      .box{
+          width: 600px;
+          height: 600px;
+         position: absolute;
+         top:0;
+         left:0;
+      }
+   .left-top{
+       width: 300px;
+       height: 300px;
+       background: url("img/1.jpg") no-repeat;
+       background-size: 600px 600px;
+       transition: all .5s;
+       transform: scale(0.5);
+       opacity: 0;
+       position: absolute;
+       top:0;
+       left: 0;
+   }
+   .right-top{
+       width: 300px;
+       height: 300px;
+       background: url("img/1.jpg") no-repeat;
+       background-position-x: -300px;
+       background-size: 600px 600px;
+       transition: all .5s;
+       transform: scale(0.5);
+       opacity: 0;
+       position: absolute;
+       top:0;
+       right: 0;
+   }
+   .left-bottom{
+       width: 300px;
+       height: 300px;
+       background: url("img/1.jpg") no-repeat;
+       background-position-y:-300px; 
+       background-size: 600px 600px;
+       transition: all .5s;
+       transform: scale(0.5);
+       opacity: 0;
+       position: absolute;
+       bottom: 0;
+      left: 0;
+   }
+   .right-bottom{
+       width: 300px;
+       height: 300px;
+       background: url("img/1.jpg") no-repeat;
+       background-position: -300px -300px;
+       background-size: 600px 600px;
+       transition: all .5s;
+       transform: scale(0.5);
+       opacity: 0;
+       position: absolute;
+       bottom: 0;
+     right: 0;
+   }
+   .top:hover .active{
+       opacity: 1;
+       transform: scale(1)
+   }
+    .top:hover img{
+        opacity: 0.5;
+        
+    }
+    </style>
+</body>
+</html>

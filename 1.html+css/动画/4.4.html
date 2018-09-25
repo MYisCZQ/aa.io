@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="top">
+			<a>
+			<div class="box"></div>
+			<div class="img"><img src="img/h4.jpg" /></div>
+			<div class="box">
+				<div class="wenzi">
+					<h3>Heading here</h3>
+                    <p>Description goes here</p>
+				</div>
+			</div>
+		</a>	
+		</div>
+		
+		
+		<style type="text/css">
+			body{
+				background: gray;
+			}
+			.top{
+				position: relative;
+				display: inline-block;
+				width: 200px;
+				height: 200px;
+				left:40px;
+				top:100px;
+				
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+			     border-radius: 50%;
+			    /* transition: all .5s;*/
+			}
+			
+			.img img{
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				position: absolute;
+				top:10px;
+				bottom: 0px;
+				left:10px;
+				right: 0px;
+				border:10px solid rgba(0, 0, 0, 0.4);
+				box-sizing: border-box;
+				transition: all .5s;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				background: rgba(0, 0, 0, 0.4);
+				border-radius: 50%;
+				position: absolute;
+				top:200px;
+				bottom: 0px;
+				left:10px;
+				right: 0px;
+			   text-align: center;
+			   opacity: 0;
+				
+				visibility: hidden;
+				transition: all .1s;	
+			}
+			.wenzi{
+				width: 200px;
+				height: 140px;
+			/*	background: red;*/
+				display: block;
+				padding-top:50px;
+				
+				transition: all .5s;				
+			}
+			.wenzi h3{
+				width: 160px;
+			margin-left: 20px;
+			margin-bottom: 10px;
+			color: white;
+			 font-size: 25px;
+			 height: 30px;
+			 line-height: 15px;
+			 border-bottom: 2px solid white;
+			}
+			.wenzi p{
+				color: #fff;
+				font-size: 12px;				
+			}
+			
+			.top:hover img{
+				
+				transform: rotate(90deg);
+				-webkit-transform: rotate(90deg);
+			}
+			.top:hover .box{
+				visibility: visible;
+				transition: all .5s;
+				opacity: 1;
+				position: absolute;
+				top:10px;
+			}
+			
+			
+		</style>
+		
+		
+		<div class="top1">
+			<a>
+			<div class="box1"></div>
+			<div class="img1"><img src="img/hau.jpg" /></div>
+			<div class="box1">
+				<div class="wenzi1">
+					<h3>Heading here</h3>
+                    <p>Description goes here</p>
+				</div>
+			</div>
+		</a>	
+		</div>
+		
+		
+		<style type="text/css">
+			.top1{
+				position: relative;
+				display: inline-block;
+				width: 200px;
+				height: 200px;
+				left:200px;
+				top:100px;
+				
+			}
+			.box1{
+				width: 200px;
+				height: 200px;
+			     border-radius: 50%;
+			    /* transition: all .5s;*/
+			}
+			
+			.img1 img{
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				position: absolute;
+				top:10px;
+				bottom: 0px;
+				left:10px;
+				right: 0px;
+				border:10px solid rgba(0, 0, 0, 0.4);
+				box-sizing: border-box;
+				transition: all .5s;
+			}
+			.box1{
+				width: 200px;
+				height: 200px;
+				background: blue;
+				border-radius: 50%;
+				position: absolute;
+				top:200px;
+				bottom: 0px;
+				left:10px;
+				right: 0px;
+			   text-align: center;
+			   opacity: 0;
+				
+				visibility: hidden;
+				transition: all .1s;	
+			}
+			.wenzi1{
+				width: 200px;
+				height: 140px;
+				display: block;
+				padding-top:50px;
+				
+				transition: all .5s;				
+			}
+			.wenzi1 h3{
+				width: 160px;
+			margin-left: 20px;
+			margin-bottom: 10px;
+			color: white;
+			 font-size: 25px;
+			 height: 30px;
+			 line-height: 15px;
+			 border-bottom: 2px solid white;
+			}
+			.wenzi1 p{
+				color: #fff;
+				font-size: 12px;
+			}
+			
+			.top1:hover img{
+				opacity: 0;
+				visibility: visible;
+				position: absolute;
+				top:-150px;
+				transition: all .5s;
+			}
+			.top1:hover .box1{
+				visibility: visible;
+				transition: all .5s;
+				opacity: 1;
+				position: absolute;
+				top:10px;
+			}
+			
+			
+		</style>
+		
+		<body>
+		<div class="top2">
+			<a>
+			<div class="box2"></div>
+			<div class="img2"><img src="img/hau.jpg" /></div>
+			<div class="mai2">
+				<div class="wenzi2">
+					<h3>Heading here</h3>
+                    <p>Description goes here</p>
+				</div>
+			</div>
+		</a>	
+		</div>
+		
+		<style type="text/css">
+			.top2{
+				position: relative;
+				display: inline-block;
+				width: 200px;
+				height: 200px;
+				left:400px;
+				top:120px;
+				
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				   border-top: 10px solid orange;
+			     border-left:10px solid orange ;
+			     border-bottom: 10px solid green;
+			     border-right:10px solid green ;
+			     border-radius: 50%;
+			     transition: all 1s;
+			}
+			
+			.img2 img{
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				position: absolute;
+				top:10px;
+				bottom: 0px;
+				left:10px;
+				right: 0px;
+			}
+			.mai2{
+				width: 200px;
+				height: 200px;
+				background: rgba(0, 0, 0, 0.4);
+				border-radius: 50%;
+				position: absolute;
+				top:10px;
+				bottom: 0px;
+				left:10px;
+				right: 0px;
+			   text-align: center;
+			   opacity: 0;
+				
+				visibility: hidden;
+				transition: all .5s;	
+			}
+			.wenzi2{
+				width: 200px;
+				height: 140px;
+				display: block;
+				padding-top:50px;
+				
+				transition: all .5s;				
+			}
+			.wenzi2 h3{
+			color: white;
+			 font-size: 22px;
+			}
+			.wenzi2 p{
+				color: #fff;
+				font-size: 12px;
+			}
+			
+			.top2:hover  .box2{
+				
+				transform: rotate(180deg);
+				-webkit-transform: rotate(180deg);
+			}
+			.top2:hover .mai2{
+				visibility: visible;
+				transition: all 1s;
+				opacity: 1;
+			}
+			
+		</style>
+		
+		<div class="top3">
+			<div class="img3">
+				<img src="img/h6.jpg" />
+			</div>
+			<div class="box3">
+				 <h3>Heading here</h3>
+                    <p>Description goes here</p>
+			</div>
+		</div>
+		
+		<style type="text/css">
+			.top3{
+				width: 200px;
+				height: 200px;
+				position: relative;
+				top: 200px;
+				left: 410px;
+				display: block;
+			}
+			.img3 img{
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;	
+				position: relative;
+				top:2px;
+				border: 10px solid orange;
+				box-sizing: border-box;
+				z-index: 2;		
+			}
+			.img3{
+						
+				border-radius: 50%;
+				
+			}
+			.box3{
+				text-align: center;
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				top:0px;
+				left:-200px;
+				display: block;
+				background: olive;
+				border-radius: 50%;	
+				transition: all .1s;
+				visibility: hidden;
+				z-index: 1;			
+			}
+			.box3 h3{
+			 width: 150px;
+			margin-left: 25px;
+			margin-bottom: 10px;
+			margin-top: 60px;
+			color: white;
+			 font-size: 25px;
+			 height: 30px;
+			 line-height: 15px;
+			 border-bottom: 2px solid white;
+			}
+			.box3 p{
+				color: #fff;
+				font-size: 12px;				
+			}
+			.top3:hover .box3{
+				position: absolute;
+				left: 0px;
+				visibility: visible;
+			}
+			.top3:hover .img3{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				left:150px;
+				top:50px;
+			}
+		</style>
+	</body>
+</html>
