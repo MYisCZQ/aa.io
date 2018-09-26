@@ -22,11 +22,6 @@
 
   1.<a href="http://MYisCZQ.github.io/2.less/翻转/4.0.html">柱形翻转</a>
   
-  
-三.SVG</br>
-
-  1.<a href="http://MYisCZQ.github.io/3.svg/1.3.html">转</a>
-  
 
 四.JavaScript
 
