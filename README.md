@@ -16,7 +16,7 @@
   
   7.<a href="http://MYisCZQ.github.io/1.html+css/开关按钮/2.3.html">开关与按钮</a>
   
-  8.<a href="http://MYisCZQ.github.io/1.html+css/3D魔方转动/3D.html">3D魔方</a>
+  8.<a href="http://aa.io/1.html+css/3D正方形转动/5.3.html">3D魔方</a>
   
 二.less
 
